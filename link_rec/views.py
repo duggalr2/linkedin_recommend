@@ -4,6 +4,7 @@ from django.contrib.auth import login, authenticate
 # from django.contrib.auth.forms import UserCreationForm
 from link_rec.forms import SignUpForm
 from .models import Profile
+import ast
 
 
 @login_required(login_url='login/')
@@ -12,6 +13,11 @@ def home(request):
     return render(request, "home.html", {'content': y})
 
 
+def parse_to_list(form_input):
+    l = ast.literal_eval(form_input)
+    l = [i.strip() for i in l]
+    return l
+
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
@@ -19,10 +25,16 @@ def signup(request):
             user = form.save()
             user.refresh_from_db()  # load the profile instance created by the signal
             user.profile.name = form.cleaned_data.get('name')
-            user.profile.current_school = form.cleaned_data.get('school')
-            user.profile.school_program = form.cleaned_data.get('school_program')
-            user.profile.school_of_interest = form.cleaned_data.get('school_of_interest')
-            user.profile.industry_of_interest = form.cleaned_data.get('industry_of_interest')
+            current_school = form.cleaned_data.get('school')
+            school_program = form.cleaned_data.get('school_program')
+            school_of_interest = form.cleaned_data.get('school_of_interest')
+            industry_of_interest = form.cleaned_data.get('industry_of_interest')
+            parsed_school_of_interest = parse_to_list(school_of_interest)
+            parsed_industry_of_interest = parse_to_list(industry_of_interest)
+            user.profile.current_school = current_school
+            user.profile.school_program = school_program
+            user.profile.school_of_interest = school_of_interest
+            user.profile.industry_of_interest = industry_of_interest
             user.save()
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=user.username, password=raw_password)
