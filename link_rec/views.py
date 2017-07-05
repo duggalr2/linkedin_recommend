@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
 # from django.contrib.auth.forms import UserCreationForm
-from link_rec.forms import SignUpForm, AuthorForm, BookForm, FormForm
+from link_rec.forms import SignUpForm
 from .models import Profile
 
 
@@ -31,7 +31,7 @@ def signup(request):
     return render(request, 'signup.html', {'form': form})
 
 
-def ind(request):
+#def ind(request):
     # if request.method == 'POST':
     #     form = AuthorForm(request.POST)
     #     if form.is_valid():
@@ -40,15 +40,15 @@ def ind(request):
     #         return redirect('home')
     # else:
     #     form = AuthorForm()
-    if request.method == 'POST':
-        form = FormForm(request.POST)
-        if form.is_valid():
-            print(form['e'])
-            return redirect('home')
-    else:
-        form = FormForm()
-    return render(request, 'index.html', {'form': form})
-
+#    if request.method == 'POST':
+#        form = FormForm(request.POST)
+#        if form.is_valid():
+#            print(form['e'])
+#            return redirect('home')
+#    else:
+#        form = FormForm()
+#    return render(request, 'index.html', {'form': form})
+#
 
 # def signup(request):
 #     if request.method == 'POST':

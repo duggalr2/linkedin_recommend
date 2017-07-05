@@ -25,5 +25,5 @@ urlpatterns = [
     url(r'^login/$', views.login, {'template_name': 'login.html'}, name='login'),
     url(r'^logout/$', views.logout, {'next_page': '/login'}, name='logout'),
     url(r'^signup/$', core_views.signup, name='signup'),
-    url(r'^index/$', core_views.ind, name='index'),
+   # url(r'^index/$', core_views.ind, name='index'),
 ]

@@ -3,9 +3,10 @@
 {% block content %}
 
     <h1>Hello {{ user.username }}</h1>
-        {{ user.profile.school }}<br/>
+        {{ user.profile.current_school }}<br/>
         {{ user.profile.school_program }}<br/>
-        {{ user.profile.industry_interest }}<br/>
+        {{ user.profile.school_of_interest }}<br/>
+        {{ user.profile.industry_of_interest  }}<br/>
 
     <li>
         <a href="{% url 'logout' %}">Logout</a>
