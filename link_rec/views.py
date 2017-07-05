@@ -77,3 +77,5 @@ def ind(request):
 #     else:
 #         form = UserCreationForm()
 #     return render(request, 'signup.html', {'form': form})
+
+

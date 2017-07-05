@@ -40,7 +40,7 @@ class SignUpForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ('name', 'username', 'password1', 'password2', 'school', 'school_program', 'industry_interest')
+        fields = ('username', 'password1', 'password2', 'school', 'school_program', 'industry_interest')
 
 
 class AuthorForm(ModelForm):

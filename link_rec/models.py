@@ -29,7 +29,7 @@ PROGRAM_CHOICES = (
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)  # One To One Field explains the One to One link
-    name = models.CharField(max_length=250)
+   # name = models.CharField(max_length=250)
     school = models.CharField(max_length=100, choices=SCHOOL_NAMES, default='uoft')
     school_program = models.CharField(max_length=100, choices=PROGRAM_CHOICES, default='computer_science')
     industry_interest = models.CharField(max_length=50, choices=INDUSTRY_CHOICES, default='software')
