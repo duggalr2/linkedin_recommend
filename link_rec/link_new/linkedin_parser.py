@@ -35,7 +35,7 @@ class Linkedin(object):
         password = self.driver.find_element_by_id('login-password')
         username.send_keys('duggalr42@gmail.com')
         try:
-            pswd = getpass.getpass('Password: ')  # not the most ideal but will do for now...
+            pswd = getpass.getpass('Password: ')  # not the most ideal but will do for now
             password.send_keys(pswd)
             password.submit()
             time.sleep(1)
