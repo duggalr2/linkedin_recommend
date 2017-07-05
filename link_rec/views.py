@@ -18,9 +18,11 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             user.refresh_from_db()  # load the profile instance created by the signal
-            user.profile.school = form.cleaned_data.get('school')
+            user.profile.name = form.cleaned_data.get('name')
+            user.profile.current_school = form.cleaned_data.get('school')
             user.profile.school_program = form.cleaned_data.get('school_program')
-            user.profile.industry_interest = form.cleaned_data.get('industry_interest')
+            user.profile.school_of_interest = form.cleaned_data.get('school_of_interest')
+            user.profile.industry_of_interest = form.cleaned_data.get('industry_of_interest')
             user.save()
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=user.username, password=raw_password)
