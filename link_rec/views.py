@@ -29,8 +29,11 @@ def signup(request):
             school_program = form.cleaned_data.get('school_program')
             school_of_interest = form.cleaned_data.get('school_of_interest')
             industry_of_interest = form.cleaned_data.get('industry_of_interest')
-            parsed_school_of_interest = parse_to_list(school_of_interest)
-            parsed_industry_of_interest = parse_to_list(industry_of_interest)
+            # TODO: type's for both below are already lists.. just pass directly to
+            # TODO: script and don't need to have the parse_to_list function!
+            #print(type(industry_of_interest), type(school_of_interest))
+            #parsed_school_of_interest = parse_to_list(school_of_interest)
+            #parsed_industry_of_interest = parse_to_list(industry_of_interest)
             user.profile.current_school = current_school
             user.profile.school_program = school_program
             user.profile.school_of_interest = school_of_interest
