@@ -145,7 +145,7 @@ class Linkedin(object):
     def get_person_information(self, url):
         """
         Return's summary of an individual person in the form of a dict: includes education, header, experience
-        (Only the most recent experience is included, doesn't included 'see more positions')
+        (Only the most recent experience is included, doesn't include 'see more positions')
         """
         self.driver.get(url)
         # self.driver.get(url)

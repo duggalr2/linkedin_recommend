@@ -50,7 +50,26 @@ def save_user_profile(sender, instance, **kwargs):
 
 
 class ParsedProfile(models.Model):
-    header = models.CharField(
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=250)
+    url = models.CharField(max_length=500)
+    header = models.CharField(max_length=500)
+    school = models.CharField(max_length=500)
+    school_program = models.CharField(max_length=500)
+
+
+class Experience(ParsedProfile):
+    #profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
+    exp1 = models.CharField(max_length=500)
+    exp2 = models.CharField(max_length=500)
+    exp3 = models.CharField(max_length=500)
+    exp4 = models.CharField(max_length=500)
+    exp5 = models.CharField(max_length=500)
+    exp6 = models.CharField(max_length=500)
+    exp7 = models.CharField(max_length=500)
+    exp8 = models.CharField(max_length=500)
+    exp9 = models.CharField(max_length=500)
+    #exp10 = models.CharField(max_length=500)
 
 
 

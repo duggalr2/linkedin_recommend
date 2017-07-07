@@ -36,9 +36,11 @@ def dump_profiles(num_iter):
 
 #dump_profiles(2)
 
-start_time = time.time()
-conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/all_in_one/for_me/db.nonsense')
-c = conn.cursor()
-c.execute("SELECT * FROM app_file_feeds")
+
+def parse_profiles_to_db(filename):
+    start_time = time.time()
+    conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
+    c = conn.cursor()
+    c.execute("CREATE ")
 
 
