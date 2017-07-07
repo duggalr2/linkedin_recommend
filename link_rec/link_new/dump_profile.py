@@ -15,9 +15,9 @@ def open_file(filename):
 
 linkedin = linkedin_parser.Linkedin()
 linkedin.linkedin_login()
+lines = open_file('linkedin_dest_url')
+print(linkedin.get_person_information('https://www.linkedin.com/in/rahul-duggal-402506134/'))
 
-#for i in open_file('linkedin_dest_url'):
-    #print(i)
 
 def dump_profiles(num_iter):
     while num_iter >= 1:
@@ -38,9 +38,13 @@ def dump_profiles(num_iter):
 
 
 def parse_profiles_to_db(filename):
-    start_time = time.time()
     conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
     c = conn.cursor()
-    c.execute("CREATE ")
+    #c.execute('SELECT * FROM link_rec_profile')
+    c.execute('SELECT * FROM link_rec_parsedprofile')
+    y = c.fetchall()
+
+parse_profiles_to_db('linkedin_dest_url')
+
 
 

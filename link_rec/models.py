@@ -58,17 +58,29 @@ class ParsedProfile(models.Model):
     school_program = models.CharField(max_length=500)
 
 
-class Experience(ParsedProfile):
+class JobTitle(ParsedProfile):
+    job1 = models.CharField(max_length=500)
+    job2 = models.CharField(max_length=500)
+    job3 = models.CharField(max_length=500)
+    job4 = models.CharField(max_length=500)
+    job5 = models.CharField(max_length=500)
+    job6 = models.CharField(max_length=500)
+    job7 = models.CharField(max_length=500)
+    job8 = models.CharField(max_length=500)
+    job9 = models.CharField(max_length=500)
+
+
+class Location(JobTitle):
     #profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
-    exp1 = models.CharField(max_length=500)
-    exp2 = models.CharField(max_length=500)
-    exp3 = models.CharField(max_length=500)
-    exp4 = models.CharField(max_length=500)
-    exp5 = models.CharField(max_length=500)
-    exp6 = models.CharField(max_length=500)
-    exp7 = models.CharField(max_length=500)
-    exp8 = models.CharField(max_length=500)
-    exp9 = models.CharField(max_length=500)
+    loc1 = models.CharField(max_length=500)
+    loc2 = models.CharField(max_length=500)
+    loc3 = models.CharField(max_length=500)
+    loc4 = models.CharField(max_length=500)
+    loc5 = models.CharField(max_length=500)
+    loc6 = models.CharField(max_length=500)
+    loc7 = models.CharField(max_length=500)
+    loc8 = models.CharField(max_length=500)
+    loc9 = models.CharField(max_length=500)
     #exp10 = models.CharField(max_length=500)
 
 
