@@ -209,7 +209,7 @@ class Linkedin(object):
             self.get_person_information(url)
 
 # First time, uncomment and run everything below, if all passed, everything is good;
-# if __name__ == '__main__':
+#if __name__ == '__main__':
 #     x = Linkedin()
 #     x.linkedin_login()
 #     print(x.get_person_information('https://www.linkedin.com/in/hollyx/'))

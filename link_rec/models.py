@@ -49,6 +49,11 @@ def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
 
 
+class ParsedProfile(models.Model):
+    header = models.CharField(
+
+
+
 #TITLE_CHOICES = (
 #    ('MR', 'Mr.'),
 #    ('MRS', 'Mrs.'),
