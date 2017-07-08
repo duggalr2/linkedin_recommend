@@ -10,13 +10,13 @@ import sqlite3
 def open_file(filename):
     f = open(filename)
     lines = f.readlines()
-    lines = [line.replace('\n', '') for line in lines if len(line)>1]
-    return lines
+   # print(lines)
+    return [line.replace('\n', '') for line in lines if len(line)>1]
 
 linkedin = linkedin_parser.Linkedin()
 linkedin.linkedin_login()
-lines = open_file('linkedin_dest_url')
-print(linkedin.get_person_information('https://www.linkedin.com/in/henryhykim/'))
+#lines = open_file('linkedin_dest_url')
+#print(linkedin.get_person_information('https://www.linkedin.com/in/henryhykim/'))
 
 
 def dump_profiles(num_iter):
@@ -36,7 +36,7 @@ def dump_profiles(num_iter):
 
 #dump_profiles(2)
 
-import pickle
+#import pickle
 
 
 def clean_education(education_list, connection):
@@ -61,8 +61,9 @@ def clean_experience(experience_list, connection):
         num = 0
         for i in range(len(job_title_list)):
             num += 1
-            connection.execute('INSERT INTO link_rec_jobtitle' + ('job'+num) + 'VALUES (?)', (job_title_list[i]))
-            connection.execute('INSERT INTO link_rec_location' + ('loc'+num) + 'VALUES (?)', (company_list[i]))
+            connection.execute('INSERT INTO link_rec_jobtitle (job%s) VALUES (?)' % (num), (job_title_list[i],))
+            #connection.execute('INSERT INTO link_rec_jobtitle' + ' ' + ('job'+str(num)) + ' ' + 'VALUES (?)', (job_title_list[i]))
+            #connection.execute('INSERT INTO link_rec_location' + ('loc'+str(num)) + 'VALUES (?)', (company_list[i]))
 
         #connection.execute('INSERT INTO link_rec_parsedprofile (school, school_program) VALUES (?, ?)', (school, program))
        # return job_title_list, company_list
@@ -82,22 +83,26 @@ def clean_header(header_list, connection):
 def parse_profiles_to_db(filename):
     conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
     c = conn.cursor()
-    lines = open('linkedin_dest_url')
-    for url in lines:
+    lines = open_file(filename)
+    for url in lines[:3]:
         info_dict = linkedin.get_person_information(url)
         education_list = info_dict.get('education')
         experience_list = info_dict.get('experience')
         header_list = info_dict.get('header')
-        school, program = clean_education(education_list)
-        job_title_list, company_list = clean_experience(experience_list)
-        name, title, url = clean_header(header_list)
-        if school != None and program != None:
-            pass
-        elif school != None and program == None:
-            pass
-        else:
-            pass
-
+        clean_education(education_list, c)
+        clean_experience(experience_list, c)
+        clean_header(header_list, c)
+    print('Done')
+       # school, program = clean_education(education_list)
+       # job_title_list, company_list = clean_experience(experience_list)
+       # name, title, url = clean_header(header_list)
+       # if school != None and program != None:
+       #     pass
+       # elif school != None and program == None:
+       #     pass
+       # else:
+       #     pass
+parse_profiles_to_db('linkedin_dest_url')
 
 
 
@@ -126,7 +131,7 @@ def parse_profiles_to_db(filename):
 
 
 
-parse_profiles_to_db('linkedin_dest_url')
+#parse_profiles_to_db('linkedin_dest_url')
 
 
 
