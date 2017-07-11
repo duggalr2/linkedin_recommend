@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from django.forms import ModelForm
 
 
 INDUSTRY_CHOICES = (
@@ -53,55 +52,70 @@ class ParsedProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=250)
     url = models.CharField(max_length=500)
-    header = models.CharField(max_length=500,blank=True)
-    school = models.CharField(max_length=500,blank=True)
-    school_program = models.CharField(max_length=500,blank=True)
+    header = models.CharField(max_length=500, null=True)
+    school = models.CharField(max_length=500, null=True)
+    school_program = models.CharField(max_length=500, null=True)
 
 
 class JobTitle(ParsedProfile):
-    job1 = models.CharField(max_length=500, blank=True)
-    job2 = models.CharField(max_length=500, blank=True)
-    job3 = models.CharField(max_length=500, blank=True)
-    job4 = models.CharField(max_length=500, blank=True)
-    job5 = models.CharField(max_length=500, blank=True)
-    job6 = models.CharField(max_length=500, blank=True)
-    job7 = models.CharField(max_length=500, blank=True)
-    job8 = models.CharField(max_length=500, blank=True)
-    job9 = models.CharField(max_length=500, blank=True)
+    job1 = models.CharField(max_length=500, null=True)
+    job2 = models.CharField(max_length=500, null=True)
+    job3 = models.CharField(max_length=500, null=True)
+    job4 = models.CharField(max_length=500, null=True)
+    job5 = models.CharField(max_length=500, null=True)
+    job6 = models.CharField(max_length=500, null=True)
+    job7 = models.CharField(max_length=500, null=True)
+    job8 = models.CharField(max_length=500, null=True)
+    job9 = models.CharField(max_length=500, null=True)
 
 
 class Location(JobTitle):
-    #profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
-    loc1 = models.CharField(max_length=500, blank=True)
-    loc2 = models.CharField(max_length=500, blank=True)
-    loc3 = models.CharField(max_length=500, blank=True)
-    loc4 = models.CharField(max_length=500, blank=True)
-    loc5 = models.CharField(max_length=500, blank=True)
-    loc6 = models.CharField(max_length=500, blank=True)
-    loc7 = models.CharField(max_length=500, blank=True)
-    loc8 = models.CharField(max_length=500, blank=True)
-    loc9 = models.CharField(max_length=500, blank=True)
-    #exp10 = models.CharField(max_length=500)
+    loc1 = models.CharField(max_length=500, null=True)
+    loc2 = models.CharField(max_length=500, null=True)
+    loc3 = models.CharField(max_length=500, null=True)
+    loc4 = models.CharField(max_length=500, null=True)
+    loc5 = models.CharField(max_length=500, null=True)
+    loc6 = models.CharField(max_length=500, null=True)
+    loc7 = models.CharField(max_length=500, null=True)
+    loc8 = models.CharField(max_length=500, null=True)
+    loc9 = models.CharField(max_length=500, null=True)
 
 
+# Below is All The Profiles that were originally in DB and added new ones by User
+# Initial Profiles, only 2000 were in DB (mainly SE/CS focused)
 
-#TITLE_CHOICES = (
-#    ('MR', 'Mr.'),
-#    ('MRS', 'Mrs.'),
-#    ('MS', 'Ms.'),
-#)
-#
-#
-#class Author(models.Model):
-#    name = models.CharField(max_length=100)
-#    title = models.CharField(max_length=3, choices=TITLE_CHOICES)
-#    birth_date = models.DateField(blank=True, null=True)
-#
-#    def __str__(self):
-#        return self.name
-#
-#
-#class Book(models.Model):
-#    name = models.CharField(max_length=100)
-#    authors = models.ManyToManyField(Author)
 
+class AllParsedProfile(models.Model):
+    name = models.CharField(max_length=250)
+    header = models.CharField(max_length=500, null=True)
+    url = models.CharField(max_length=500)
+    school = models.CharField(max_length=500, null=True)
+    school_program = models.CharField(max_length=500, null=True)
+    # url = models.CharField(max_length=500)
+
+
+class AllJobTitle(models.Model):
+    profile = models.ForeignKey(AllParsedProfile, on_delete=models.CASCADE)
+    job = models.CharField(max_length=500, null=True)
+    # job2 = models.CharField(max_length=500, null=True)
+    # job3 = models.CharField(max_length=500, null=True)
+    # job4 = models.CharField(max_length=500, null=True)
+    # job5 = models.CharField(max_length=500, null=True)
+    # job6 = models.CharField(max_length=500, null=True)
+    # job7 = models.CharField(max_length=500, null=True)
+    # job8 = models.CharField(max_length=500, null=True)
+    # job9 = models.CharField(max_length=500, null=True)
+
+
+class AllLocation(models.Model):
+    job = models.OneToOneField(AllJobTitle, on_delete=models.CASCADE)
+    loc = models.CharField(max_length=500, default=None)
+    # profile_id = models.ForeignKey(AllParsedProfile, on_delete=models.CASCADE)
+    # loc2 = models.CharField(max_length=500, null=True)
+    # loc3 = models.CharField(max_length=500, null=True)
+    # loc4 = models.CharField(max_length=500, null=True)
+    # loc5 = models.CharField(max_length=500, null=True)
+    # loc6 = models.CharField(max_length=500, null=True)
+    # loc7 = models.CharField(max_length=500, null=True)
+    # loc8 = models.CharField(max_length=500, null=True)
+    # loc9 = models.CharField(max_length=500, null=True)

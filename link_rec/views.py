@@ -13,6 +13,13 @@ def home(request):
     return render(request, "home.html", {'content': y})
 
 
+#@login_required(login_url='login/')
+def personal_view(request):
+#    if request.method == 'GET':
+
+    return render(request, 'button.html')
+
+
 def parse_to_list(form_input):
     l = ast.literal_eval(form_input)
     l = [i.strip() for i in l]
