@@ -108,7 +108,7 @@ class AllJobTitle(models.Model):
 
 
 class AllLocation(models.Model):
-    job = models.OneToOneField(AllJobTitle, on_delete=models.CASCADE)
+    profile = models.ForeignKey(AllParsedProfile, on_delete=models.CASCADE)
     loc = models.CharField(max_length=500, default=None)
     # profile_id = models.ForeignKey(AllParsedProfile, on_delete=models.CASCADE)
     # loc2 = models.CharField(max_length=500, null=True)
