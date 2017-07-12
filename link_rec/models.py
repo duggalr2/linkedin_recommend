@@ -48,37 +48,37 @@ def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
 
 
-class ParsedProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=250)
-    url = models.CharField(max_length=500)
-    header = models.CharField(max_length=500, null=True)
-    school = models.CharField(max_length=500, null=True)
-    school_program = models.CharField(max_length=500, null=True)
-
-
-class JobTitle(ParsedProfile):
-    job1 = models.CharField(max_length=500, null=True)
-    job2 = models.CharField(max_length=500, null=True)
-    job3 = models.CharField(max_length=500, null=True)
-    job4 = models.CharField(max_length=500, null=True)
-    job5 = models.CharField(max_length=500, null=True)
-    job6 = models.CharField(max_length=500, null=True)
-    job7 = models.CharField(max_length=500, null=True)
-    job8 = models.CharField(max_length=500, null=True)
-    job9 = models.CharField(max_length=500, null=True)
-
-
-class Location(JobTitle):
-    loc1 = models.CharField(max_length=500, null=True)
-    loc2 = models.CharField(max_length=500, null=True)
-    loc3 = models.CharField(max_length=500, null=True)
-    loc4 = models.CharField(max_length=500, null=True)
-    loc5 = models.CharField(max_length=500, null=True)
-    loc6 = models.CharField(max_length=500, null=True)
-    loc7 = models.CharField(max_length=500, null=True)
-    loc8 = models.CharField(max_length=500, null=True)
-    loc9 = models.CharField(max_length=500, null=True)
+# class ParsedProfile(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE)
+#     name = models.CharField(max_length=250)
+#     url = models.CharField(max_length=500)
+#     header = models.CharField(max_length=500, null=True)
+#     school = models.CharField(max_length=500, null=True)
+#     school_program = models.CharField(max_length=500, null=True)
+#
+#
+# class JobTitle(ParsedProfile):
+#     job1 = models.CharField(max_length=500, null=True)
+#     job2 = models.CharField(max_length=500, null=True)
+#     job3 = models.CharField(max_length=500, null=True)
+#     job4 = models.CharField(max_length=500, null=True)
+#     job5 = models.CharField(max_length=500, null=True)
+#     job6 = models.CharField(max_length=500, null=True)
+#     job7 = models.CharField(max_length=500, null=True)
+#     job8 = models.CharField(max_length=500, null=True)
+#     job9 = models.CharField(max_length=500, null=True)
+#
+#
+# class Location(JobTitle):
+#     loc1 = models.CharField(max_length=500, null=True)
+#     loc2 = models.CharField(max_length=500, null=True)
+#     loc3 = models.CharField(max_length=500, null=True)
+#     loc4 = models.CharField(max_length=500, null=True)
+#     loc5 = models.CharField(max_length=500, null=True)
+#     loc6 = models.CharField(max_length=500, null=True)
+#     loc7 = models.CharField(max_length=500, null=True)
+#     loc8 = models.CharField(max_length=500, null=True)
+#     loc9 = models.CharField(max_length=500, null=True)
 
 
 # Below is All The Profiles that were originally in DB and added new ones by User

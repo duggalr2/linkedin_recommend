@@ -84,14 +84,14 @@ def clean_experience(id, experience_list, header_list, connection, conn):
 
     else:
         # TODO: Switch these variable names!
-        job_title_list = [experience_list[i] for i in range(len(experience_list)) if i % 2]
-        company_list = [experience_list[i] for i in range(len(experience_list)) if i % 2 != 0]
+        company_name = [experience_list[i] for i in range(len(experience_list)) if i%2]
+        job_title = [experience_list[i] for i in range(len(experience_list)) if i%2 == 0]
         # num = 0
-        for i in range(len(job_title_list)):
-            # num += 1
-            connection.execute('INSERT INTO link_rec_alljobtitle (profile_id, job) VALUES (?, ?)', (id, job_title_list[i],))
+        assert len(company_name) == len(job_title)
+        for i in range(len(company_name)):
+            connection.execute('INSERT INTO link_rec_alllocation (profile_id, loc) VALUES (?, ?)', (id, company_name[i],))
             conn.commit()
-            connection.execute('INSERT INTO link_rec_alllocation (profile_id, loc) VALUES (?, ?)', (id, company_list[i],))
+            connection.execute('INSERT INTO link_rec_alljobtitle (profile_id, job) VALUES (?, ?)', (id, job_title[i],))
             conn.commit()
 
 
@@ -105,34 +105,53 @@ def clean_header(header_list):
         name, title, url = header_list[0], None,  header_list[-1]
         return name, title, url
 
+import time
 
-def parse_profiles_to_db(filename):
+def parse_profiles_to_db(filename, start_iter=0, end_iter=100, interval = 7):
     conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
     c = conn.cursor()
     lines = open_file(filename)
     id = 0
-    for url in lines[198:501]:
-        info_dict = linkedin.get_person_information(url)
-        if info_dict is not None:
-            university_name, university_program = get_education_data(info_dict)
-            experience_list = info_dict.get('experience')
-            header_list = info_dict.get('header')
-            new_header_list = clean_header(header_list)
-            clean_education(university_name, university_program, new_header_list, c, conn)
-            id += 1
-            clean_experience(id, experience_list, header_list, c, conn)
-            conn.commit()
-        else:
-            continue
+    num = 0
+
+    while interval <= end_iter:
+
+        if num == 7:
+            time.sleep(25)
+            num = 0
+            start_iter += 7
+            interval += 7
+
+        for url in lines[start_iter:interval]:
+            info_dict = linkedin.get_person_information(url)
+
+            if info_dict is not None:
+                university_name, university_program = get_education_data(info_dict)
+                experience_list = info_dict.get('experience')
+                header_list = info_dict.get('header')
+                new_header_list = clean_header(header_list)
+                clean_education(university_name, university_program, new_header_list, c, conn)
+                id += 1
+                clean_experience(id, experience_list, header_list, c, conn)
+                conn.commit()
+
+            else:
+                continue
+
+            num += 1
+
     print('Done')
 
+# TODO: Implement a login checker <-- checks if site is @ login page or not..
 
-if __name__ == '__main__':
-    linkedin = linkedin_parser.Linkedin()
-    linkedin.linkedin_login()
-    # lines = open_file('linkedin_dest_url')
-    # y = linkedin.get_person_information('https://www.linkedin.com/in/davidpecile/')
-    # print(y)
-    # print(get_education_data(y))
-    # dump_profiles(2)
-    parse_profiles_to_db('linkedin_dest_url')
+# if __name__ == '__main__':
+#     linkedin = linkedin_parser.Linkedin()
+#     linkedin.linkedin_login()
+#     # lines = open_file('linkedin_dest_url')
+#     # y = linkedin.get_person_information('https://www.linkedin.com/in/davidpecile/')
+#     # print(y)
+#     # print(get_education_data(y))
+#     # dump_profiles(2)
+#     parse_profiles_to_db('linkedin_dest_url', 0, 100, 7)
+
+#105
