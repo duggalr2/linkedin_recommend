@@ -154,7 +154,7 @@ def startup():
 def admin_it(): # admin/hr/coordination/it
     new_title_list = [tokenize_and_stem(i) for i in job_title]
     searchRegex = re.compile(
-        '(administr|associ|project|coordin|repres|ambassador|teach|talent)').search
+        '(administr|coordin|repres|ambassador|teach|talent)').search
     x = filterPick(new_title_list, searchRegex, 'admin/coordination/it')
     return x
 
@@ -165,7 +165,7 @@ def write_to_file(items):
             with open('job_classified', 'a') as f:
                 job = ' '.join(i[0][0])
                 classification = i[0][1]
-                # f.write(job + ', ' + classification + '\n')
+                f.write(job + ', ' + classification + '\n')
 
 
 def count(data):
@@ -213,7 +213,6 @@ def barGraph(data_count):
 # data_count = count(classification)
 # barGraph(data_count)
 
-
 # software = software()
 # write_to_file(software)
 # finance = finance()
@@ -234,7 +233,6 @@ def barGraph(data_count):
 # write_to_file(admin)
 
 
-
 def vocabSet(data):
     """
     Create's a Vocab Set: List of unique word's
@@ -244,6 +242,7 @@ def vocabSet(data):
     for w in data:
         new_set = new_set | set(w)
     return list(new_set)
+
 
 def bag_of_words(vocabSet, row):
     """
@@ -307,37 +306,39 @@ def searchBS(big_list):
     return new_big_list
 
 
+# Multi-label kNN Classification
+
+li = searchBS(big_list)
 new_class = []
 new_job_title = []
-li = searchBS(big_list)
-print(li)
-# for i in li:
-#     new_class.append(i[1:])
-#     new_job_title.append(i[0])
-#
-#
-# new_job_title_list = []
-# for y in new_job_title:
-#     st = ''.join(y)
-#     new_job_title_list.append(st)
-#
-# X_train = np.array(new_job_title_list)
-# y_train_text = new_class
-#
-# mlb = MultiLabelBinarizer()
-# Y = mlb.fit_transform(y_train_text)
-#
-# classifier = Pipeline([
-#     ('vectorizer', CountVectorizer()),
-#     ('tfidf', TfidfTransformer()),
-#     ('clf', OneVsRestClassifier(LinearSVC()))])
-#
-# classifier.fit(X_train, Y)
-# predicted = classifier.predict(X_train)
-# all_labels = mlb.inverse_transform(predicted)
-#
-# for item, labels in zip(X_train, all_labels):
-#     print('{0} => {1}'.format(item, ', '.join(labels)))
+
+for i in li:
+    new_class.append(i[1:])
+    new_job_title.append(i[0])
+
+
+new_job_title_list = []
+for y in new_job_title:
+    st = ''.join(y)
+    new_job_title_list.append(st)
+
+X_train = np.array(new_job_title_list)
+y_train_text = new_class
+
+mlb = MultiLabelBinarizer()
+Y = mlb.fit_transform(y_train_text)
+
+classifier = Pipeline([
+    ('vectorizer', CountVectorizer()),
+    ('tfidf', TfidfTransformer()),
+    ('clf', OneVsRestClassifier(LinearSVC()))])
+
+classifier.fit(X_train, Y)
+predicted = classifier.predict(X_train)
+all_labels = mlb.inverse_transform(predicted)
+
+for item, labels in zip(X_train, all_labels):
+    print('{0} => {1}'.format(item, ', '.join(labels)))
 
 
 
