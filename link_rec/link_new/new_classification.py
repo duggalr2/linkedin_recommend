@@ -53,6 +53,8 @@ def stem_for_regex(items):
         x.append(tokenize_and_stem(i))
     return [y for i in x for y in i]
 
+
+# print(stem_for_regex(['cryptography', 'crypto', 'blockchain', 'ethereum']))
 # print(stem_for_regex(['fellow']))
 
 # l = ['mechanical', 'industrial', 'skule', 'drilling', 'robotic', 'electrical']
@@ -159,6 +161,14 @@ def admin_it(): # admin/hr/coordination/it
     return x
 
 
+def crypto():
+    new_title_list = [tokenize_and_stem(i) for i in job_title]
+    searchRegex = re.compile(
+        '(cryptographi|blockchain|crypto|ethereum)').search
+    x = filterPick(new_title_list, searchRegex, 'crypto/blockchain')
+    return x
+
+
 def write_to_file(items):
     for i in items:
         if len(i) != 0:
@@ -231,6 +241,8 @@ def barGraph(data_count):
 # write_to_file(engineer)
 # admin = admin_it()
 # write_to_file(admin)
+# crypto = crypto()
+# write_to_file(crypto)
 
 
 def vocabSet(data):

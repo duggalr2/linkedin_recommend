@@ -144,9 +144,9 @@ def parse_profiles_to_db(filename, start_iter=0, end_iter=100, interval=7):
 
 # TODO: Implement a login checker <-- checks if site is @ login page or not..
 
-# if __name__ == '__main__':
-    # linkedin = linkedin_parser.Linkedin()
-    # linkedin.linkedin_login()
+if __name__ == '__main__':
+    linkedin = linkedin_parser.Linkedin()
+    linkedin.linkedin_login()
     # lines = open_file('linkedin_dest_url')
     # y = linkedin.get_person_information('https://www.linkedin.com/in/davidpecile/')
     # print(y)

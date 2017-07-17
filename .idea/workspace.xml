@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4a95e68-07ac-4037-be0b-d19f7b41bbbf" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_project_visualized.png" afterPath="$PROJECT_DIR$/my_project_visualized.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/link_rec/link_new/dump_profile.py" afterPath="$PROJECT_DIR$/link_rec/link_new/dump_profile.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/link_rec/link_new/edu_classification.py" afterPath="$PROJECT_DIR$/link_rec/link_new/edu_classification.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/link_rec/link_new/linkedin_dest_url" afterPath="$PROJECT_DIR$/link_rec/link_new/linkedin_dest_url" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/link_rec/link_new/new_classification.py" afterPath="$PROJECT_DIR$/link_rec/link_new/new_classification.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/link_rec/models.py" afterPath="$PROJECT_DIR$/link_rec/models.py" />
     </list>
     <ignored path="linkedin_recommend.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,8 +21,8 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/linkedin_recommend$dump_profile.coverage" NAME="dump_profile Coverage Results" MODIFIED="1499738548238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new" />
-    <SUITE FILE_PATH="coverage/linkedin_recommend$new_classification.coverage" NAME="new_classification Coverage Results" MODIFIED="1500301171172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new" />
-    <SUITE FILE_PATH="coverage/linkedin_recommend$edu_classification.coverage" NAME="edu_classification Coverage Results" MODIFIED="1500301394883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new" />
+    <SUITE FILE_PATH="coverage/linkedin_recommend$new_classification.coverage" NAME="new_classification Coverage Results" MODIFIED="1500334472433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new" />
+    <SUITE FILE_PATH="coverage/linkedin_recommend$edu_classification.coverage" NAME="edu_classification Coverage Results" MODIFIED="1500333293509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new" />
     <SUITE FILE_PATH="coverage/linkedin_recommend$x.coverage" NAME="x Coverage Results" MODIFIED="1499737799439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new/files" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -33,38 +37,45 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/link_rec/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="405">
+              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my_project_visualized.png" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/my_project_visualized.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="dump_profile.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/link_rec/link_new/dump_profile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1590">
-              <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+            <state relative-caret-position="405">
+              <caret line="132" column="65" selection-start-line="132" selection-start-column="65" selection-end-line="132" selection-end-column="65" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
-                <marker date="1499832707000" expanded="true" signature="1532:1636" ph="INSERT INTO link_rec_allparsedprofile... " />
-                <marker date="1499832707000" expanded="true" signature="1858:1952" ph="INSERT INTO link_rec_allparsedprofile... " />
-                <marker date="1499832707000" expanded="true" signature="2226:2311" ph="INSERT INTO link_rec_allparsedprofile... " />
-                <marker date="1499832707000" expanded="true" signature="2516:2590" ph="INSERT INTO link_rec_allparsedprofile... " />
-                <marker date="1499832707000" expanded="true" signature="3183:3247" ph="INSERT INTO link_rec_alllocation... " />
-                <marker date="1499832707000" expanded="true" signature="3332:3396" ph="INSERT INTO link_rec_alljobtitle... " />
-                <marker date="1499832707000" expanded="true" signature="5538:5581" ph="UPDATE link_... " />
-                <marker date="1499832707000" expanded="true" signature="5538:5583" ph="UPDATE link_... " />
+                <marker date="1500334845000" expanded="true" signature="1532:1636" ph="INSERT INTO link_rec_allparsedprofile... " />
+                <marker date="1500334845000" expanded="true" signature="1858:1952" ph="INSERT INTO link_rec_allparsedprofile... " />
+                <marker date="1500334845000" expanded="true" signature="2226:2311" ph="INSERT INTO link_rec_allparsedprofile... " />
+                <marker date="1500334845000" expanded="true" signature="2516:2590" ph="INSERT INTO link_rec_allparsedprofile... " />
+                <marker date="1500334845000" expanded="true" signature="3183:3247" ph="INSERT INTO link_rec_alllocation... " />
+                <marker date="1500334845000" expanded="true" signature="3332:3396" ph="INSERT INTO link_rec_alljobtitle... " />
+                <marker date="1500334845000" expanded="true" signature="5532:5575" ph="UPDATE link_... " />
+                <marker date="1500334845000" expanded="true" signature="5532:5577" ph="UPDATE link_... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="linkedin_graph.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/link_rec/link_new/linkedin_graph.py">
+      <file leaf-file-name="linkedin_dest_url" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/link_rec/link_new/linkedin_dest_url">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="31" />
+            <state relative-caret-position="60">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -73,25 +84,26 @@
       <file leaf-file-name="new_classification.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/link_rec/link_new/new_classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="339" column="0" selection-start-line="339" selection-start-column="2" selection-end-line="342" selection-end-column="23" />
+            <state relative-caret-position="390">
+              <caret line="274" column="31" selection-start-line="274" selection-start-column="31" selection-end-line="274" selection-end-column="31" />
               <folding>
-                <marker date="1500301425000" expanded="true" signature="660:696" ph="SELECT job F... link_rec_alljobtitle" />
-                <marker date="1500301425000" expanded="true" signature="781:817" ph="SELECT loc F... link_rec_alllocation" />
-                <marker date="1500301425000" expanded="true" signature="901:942" ph="SELECT url F... link_rec_allparsedprofile" />
+                <marker date="1500334549000" expanded="true" signature="660:696" ph="SELECT job F... link_rec_alljobtitle" />
+                <marker date="1500334549000" expanded="true" signature="781:817" ph="SELECT loc F... link_rec_alllocation" />
+                <marker date="1500334549000" expanded="true" signature="901:942" ph="SELECT url F... link_rec_allparsedprofile" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edu_classification.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="edu_classification.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/link_rec/link_new/edu_classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="207" column="35" selection-start-line="207" selection-start-column="35" selection-end-line="207" selection-end-column="35" />
+            <state relative-caret-position="293">
+              <caret line="72" column="59" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="59" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
-                <marker date="1500301425000" expanded="true" signature="660:712" ph="SELECT schoo... link_rec_allparsedprofile" />
+                <marker date="1500333290000" expanded="true" signature="660:712" ph="SELECT schoo... link_rec_allparsedprofile" />
+                <marker date="1500333290000" expanded="true" signature="751:795" ph="SELECT schoo... link_rec_allparsedprofile" />
               </folding>
             </state>
           </provider>
@@ -115,12 +127,12 @@
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/templates/button.html" />
         <option value="$PROJECT_DIR$/link_rec/link_new/files/x.py" />
-        <option value="$PROJECT_DIR$/link_rec/models.py" />
-        <option value="$PROJECT_DIR$/link_rec/link_new/linkedin_dest_url" />
-        <option value="$PROJECT_DIR$/link_rec/link_new/dump_profile.py" />
         <option value="$PROJECT_DIR$/link_rec/link_new/job_classified" />
-        <option value="$PROJECT_DIR$/link_rec/link_new/new_classification.py" />
         <option value="$PROJECT_DIR$/link_rec/link_new/edu_classification.py" />
+        <option value="$PROJECT_DIR$/link_rec/link_new/new_classification.py" />
+        <option value="$PROJECT_DIR$/link_rec/link_new/dump_profile.py" />
+        <option value="$PROJECT_DIR$/link_rec/link_new/linkedin_dest_url" />
+        <option value="$PROJECT_DIR$/link_rec/models.py" />
       </list>
     </option>
   </component>
@@ -257,28 +269,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkedin_recommend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkedin_recommend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="link_rec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="link_new" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="junk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -295,7 +285,7 @@
       <recent name="$PROJECT_DIR$/link_rec/link_new/junk" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.edu_classification">
+  <component name="RunManager" selected="Python.new_classification">
     <configuration default="false" name="x" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -632,8 +622,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.edu_classification" />
-        <item index="1" class="java.lang.String" itemvalue="Python.new_classification" />
+        <item index="0" class="java.lang.String" itemvalue="Python.new_classification" />
+        <item index="1" class="java.lang.String" itemvalue="Python.edu_classification" />
         <item index="2" class="java.lang.String" itemvalue="Python.dump_profile" />
         <item index="3" class="java.lang.String" itemvalue="Python.x" />
       </list>
@@ -656,13 +646,13 @@
     <frame x="0" y="14" width="1280" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22374798" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20193861" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42958748" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4793741" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -726,14 +716,14 @@
           <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
-            <marker date="1499832707000" expanded="true" signature="1532:1636" ph="INSERT INTO link_rec_allparsedprofile... " />
-            <marker date="1499832707000" expanded="true" signature="1858:1952" ph="INSERT INTO link_rec_allparsedprofile... " />
-            <marker date="1499832707000" expanded="true" signature="2226:2311" ph="INSERT INTO link_rec_allparsedprofile... " />
-            <marker date="1499832707000" expanded="true" signature="2516:2590" ph="INSERT INTO link_rec_allparsedprofile... " />
-            <marker date="1499832707000" expanded="true" signature="3183:3247" ph="INSERT INTO link_rec_alllocation... " />
-            <marker date="1499832707000" expanded="true" signature="3332:3396" ph="INSERT INTO link_rec_alljobtitle... " />
-            <marker date="1499832707000" expanded="true" signature="5538:5581" ph="UPDATE link_... " />
-            <marker date="1499832707000" expanded="true" signature="5538:5583" ph="UPDATE link_... " />
+            <marker date="1500334845000" expanded="true" signature="1532:1636" ph="INSERT INTO link_rec_allparsedprofile... " />
+            <marker date="1500334845000" expanded="true" signature="1858:1952" ph="INSERT INTO link_rec_allparsedprofile... " />
+            <marker date="1500334845000" expanded="true" signature="2226:2311" ph="INSERT INTO link_rec_allparsedprofile... " />
+            <marker date="1500334845000" expanded="true" signature="2516:2590" ph="INSERT INTO link_rec_allparsedprofile... " />
+            <marker date="1500334845000" expanded="true" signature="3183:3247" ph="INSERT INTO link_rec_alllocation... " />
+            <marker date="1500334845000" expanded="true" signature="3332:3396" ph="INSERT INTO link_rec_alljobtitle... " />
+            <marker date="1500334845000" expanded="true" signature="5532:5575" ph="UPDATE link_... " />
+            <marker date="1500334845000" expanded="true" signature="5532:5577" ph="UPDATE link_... " />
           </folding>
         </state>
       </provider>
@@ -760,14 +750,14 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
-            <marker date="1499832707000" expanded="true" signature="1532:1636" ph="INSERT INTO link_rec_allparsedprofile... " />
-            <marker date="1499832707000" expanded="true" signature="1858:1952" ph="INSERT INTO link_rec_allparsedprofile... " />
-            <marker date="1499832707000" expanded="true" signature="2226:2311" ph="INSERT INTO link_rec_allparsedprofile... " />
-            <marker date="1499832707000" expanded="true" signature="2516:2590" ph="INSERT INTO link_rec_allparsedprofile... " />
-            <marker date="1499832707000" expanded="true" signature="3183:3247" ph="INSERT INTO link_rec_alllocation... " />
-            <marker date="1499832707000" expanded="true" signature="3332:3396" ph="INSERT INTO link_rec_alljobtitle... " />
-            <marker date="1499832707000" expanded="true" signature="5538:5581" ph="UPDATE link_... " />
-            <marker date="1499832707000" expanded="true" signature="5538:5583" ph="UPDATE link_... " />
+            <marker date="1500334845000" expanded="true" signature="1532:1636" ph="INSERT INTO link_rec_allparsedprofile... " />
+            <marker date="1500334845000" expanded="true" signature="1858:1952" ph="INSERT INTO link_rec_allparsedprofile... " />
+            <marker date="1500334845000" expanded="true" signature="2226:2311" ph="INSERT INTO link_rec_allparsedprofile... " />
+            <marker date="1500334845000" expanded="true" signature="2516:2590" ph="INSERT INTO link_rec_allparsedprofile... " />
+            <marker date="1500334845000" expanded="true" signature="3183:3247" ph="INSERT INTO link_rec_alllocation... " />
+            <marker date="1500334845000" expanded="true" signature="3332:3396" ph="INSERT INTO link_rec_alljobtitle... " />
+            <marker date="1500334845000" expanded="true" signature="5532:5575" ph="UPDATE link_... " />
+            <marker date="1500334845000" expanded="true" signature="5532:5577" ph="UPDATE link_... " />
           </folding>
         </state>
       </provider>
@@ -776,6 +766,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2940">
           <caret line="196" column="45" selection-start-line="196" selection-start-column="45" selection-end-line="196" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -821,11 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_project_visualized.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/link_rec/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -847,21 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/link_new/linkedin_dest_url">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/link_rec/link_new/ran.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -876,36 +847,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/link_new/dump_profile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-            <marker date="1499832707000" expanded="true" signature="1532:1636" ph="INSERT INTO link_rec_allparsedprofile... " />
-            <marker date="1499832707000" expanded="true" signature="1858:1952" ph="INSERT INTO link_rec_allparsedprofile... " />
-            <marker date="1499832707000" expanded="true" signature="2226:2311" ph="INSERT INTO link_rec_allparsedprofile... " />
-            <marker date="1499832707000" expanded="true" signature="2516:2590" ph="INSERT INTO link_rec_allparsedprofile... " />
-            <marker date="1499832707000" expanded="true" signature="3183:3247" ph="INSERT INTO link_rec_alllocation... " />
-            <marker date="1499832707000" expanded="true" signature="3332:3396" ph="INSERT INTO link_rec_alljobtitle... " />
-            <marker date="1499832707000" expanded="true" signature="5538:5581" ph="UPDATE link_... " />
-            <marker date="1499832707000" expanded="true" signature="5538:5583" ph="UPDATE link_... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/link_rec/link_new/job_classified">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1620">
           <caret line="239" column="1" selection-start-line="239" selection-start-column="1" selection-end-line="239" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/link_new/linkedin_graph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -929,7 +874,7 @@
         <state relative-caret-position="375">
           <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
           <folding>
-            <element signature="e#0#46#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -942,27 +887,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/link_new/new_classification.py">
+    <entry file="file://$PROJECT_DIR$/link_rec/link_new/linkedin_graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="339" column="0" selection-start-line="339" selection-start-column="2" selection-end-line="342" selection-end-column="23" />
-          <folding>
-            <marker date="1500301425000" expanded="true" signature="660:696" ph="SELECT job F... link_rec_alljobtitle" />
-            <marker date="1500301425000" expanded="true" signature="781:817" ph="SELECT loc F... link_rec_alllocation" />
-            <marker date="1500301425000" expanded="true" signature="901:942" ph="SELECT url F... link_rec_allparsedprofile" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/link_rec/link_new/edu_classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="207" column="35" selection-start-line="207" selection-start-column="35" selection-end-line="207" selection-end-column="35" />
+        <state relative-caret-position="293">
+          <caret line="72" column="59" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="59" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-            <marker date="1500301425000" expanded="true" signature="660:712" ph="SELECT schoo... link_rec_allparsedprofile" />
+            <marker date="1500333290000" expanded="true" signature="660:712" ph="SELECT schoo... link_rec_allparsedprofile" />
+            <marker date="1500333290000" expanded="true" signature="751:795" ph="SELECT schoo... link_rec_allparsedprofile" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_rec/link_new/new_classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="274" column="31" selection-start-line="274" selection-start-column="31" selection-end-line="274" selection-end-column="31" />
+          <folding>
+            <marker date="1500334549000" expanded="true" signature="660:696" ph="SELECT job F... link_rec_alljobtitle" />
+            <marker date="1500334549000" expanded="true" signature="781:817" ph="SELECT loc F... link_rec_alllocation" />
+            <marker date="1500334549000" expanded="true" signature="901:942" ph="SELECT url F... link_rec_allparsedprofile" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_rec/link_new/dump_profile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="132" column="65" selection-start-line="132" selection-start-column="65" selection-end-line="132" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+            <marker date="1500334845000" expanded="true" signature="1532:1636" ph="INSERT INTO link_rec_allparsedprofile... " />
+            <marker date="1500334845000" expanded="true" signature="1858:1952" ph="INSERT INTO link_rec_allparsedprofile... " />
+            <marker date="1500334845000" expanded="true" signature="2226:2311" ph="INSERT INTO link_rec_allparsedprofile... " />
+            <marker date="1500334845000" expanded="true" signature="2516:2590" ph="INSERT INTO link_rec_allparsedprofile... " />
+            <marker date="1500334845000" expanded="true" signature="3183:3247" ph="INSERT INTO link_rec_alllocation... " />
+            <marker date="1500334845000" expanded="true" signature="3332:3396" ph="INSERT INTO link_rec_alljobtitle... " />
+            <marker date="1500334845000" expanded="true" signature="5532:5575" ph="UPDATE link_... " />
+            <marker date="1500334845000" expanded="true" signature="5532:5577" ph="UPDATE link_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_rec/link_new/linkedin_dest_url">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_rec/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_project_visualized.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>

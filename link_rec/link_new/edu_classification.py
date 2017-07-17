@@ -20,9 +20,13 @@ def get_education():
     c = conn.cursor()
     c.execute('SELECT school_program FROM link_rec_allparsedprofile')
     y = c.fetchall()
-    return [i[0] for i in y if i[0] is not None]
+    c.execute('SELECT school FROM link_rec_allparsedprofile')
+    w = c.fetchall()
+    return [i[0] for i in y if i[0] is not None], [i[0] for i in w if i[0] is not None]
 
-education_list = get_education()
+education_list, school_list = get_education()
+# for i in school_list:
+#     print(i)
 
 stopwords = nltk.corpus.stopwords.words('english')  # load the stop words from nltk
 stemmer = SnowballStemmer("english")  # stemming
@@ -216,8 +220,8 @@ classifier.fit(X_train, Y)
 predicted = classifier.predict(X_train)
 all_labels = mlb.inverse_transform(predicted)
 
-# for item, labels in zip(X_train, all_labels):
-#     print('{0} => {1}'.format(item, ', '.join(labels)))
+for item, labels in zip(X_train, all_labels):
+    print('{0} => {1}'.format(item, ', '.join(labels)))
 
 # with open('new_classification_edu', 'a') as f:
 #     for item, labels in zip(X_train, all_labels):

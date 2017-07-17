@@ -5,26 +5,44 @@ from django.dispatch import receiver
 
 
 INDUSTRY_CHOICES = (
-    ('software', 'software'),
-    ('entrepreneur', 'entrepreneur'),
-    ('data_science', 'data science'),
-    ('research', 'research'),
-    ('finance', 'finance'),
-    ('medicine', 'medicine'),
+    ('software', 'Software'),
+    ('engineering', 'Engineering, excluding Software'),
+    ('research', 'Research'),
+    ('design', 'Design'),
+    ('data_science', 'Data Science'),
+    ('product_manager', 'Product Manager'),
+    ('business_finance', 'Business and Finance'),
+    ('startup_founder', 'Startup Founders/Executives'),
+    ('admin_coordination', 'Startup Founders/Executives'),
+    ('startup_founder', 'Admin/Coordination/IT/HR'),
+    ('crypto_blockchain', 'Cryptography/Blockchain')
 )
 
 SCHOOL_NAMES = (
     ('uoft', 'University of Toronto'),
-    ('harvard', 'Harvard'),
-    ('MIT', 'MIT'),
+    ('harvard', 'Harvard University'),
+    ('mit', 'Massachusetts Institute of Technology'),
     ('waterloo', 'Univertsity of Waterloo'),
+    ('stanford', 'Stanford University'),
+    ('western', 'Western University'),
+    ('ucb', 'University of California, Berkeley'),
+    ('caltech', 'Caltech'),
+    ('cornell', 'Cornell University'),
+    ('oxford', 'Oxford University'),
+    ('cmu', 'Carnegie Mellon University'),
+    ('upenn', 'University of Pennsylvania'),
+    ('cambridge', 'University of Cambridge'),
+    ('ucla', 'University of California, Los Angeles'),
+    ('queens', "Queen's University"),
+    ('columbia', 'Columbia University')
 )
 
 PROGRAM_CHOICES = (
     ('computer_science', 'Computer Science'),
-    ('commerce', 'Commerce'),
-    ('medicine_lifesci', 'Medicine/Lifesci/Healthsci'),
-    ('math_statistics', 'Math/Statistics/Physics'),
+    ('commerce_business', 'Commerce/Business/Finance'),
+    ('humanities_lifesci', 'Humanities/LifeSci/HealthSci'),
+    ('math_physics_statistics', 'Math/Physics/Statistics'),
+    ('engineering', 'Engineering'),
 )
 
 
@@ -48,37 +66,23 @@ def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
 
 
-# class ParsedProfile(models.Model):
-#     user = models.OneToOneField(User, on_delete=models.CASCADE)
-#     name = models.CharField(max_length=250)
-#     url = models.CharField(max_length=500)
-#     header = models.CharField(max_length=500, null=True)
-#     school = models.CharField(max_length=500, null=True)
-#     school_program = models.CharField(max_length=500, null=True)
-#
-#
-# class JobTitle(ParsedProfile):
-#     job1 = models.CharField(max_length=500, null=True)
-#     job2 = models.CharField(max_length=500, null=True)
-#     job3 = models.CharField(max_length=500, null=True)
-#     job4 = models.CharField(max_length=500, null=True)
-#     job5 = models.CharField(max_length=500, null=True)
-#     job6 = models.CharField(max_length=500, null=True)
-#     job7 = models.CharField(max_length=500, null=True)
-#     job8 = models.CharField(max_length=500, null=True)
-#     job9 = models.CharField(max_length=500, null=True)
-#
-#
-# class Location(JobTitle):
-#     loc1 = models.CharField(max_length=500, null=True)
-#     loc2 = models.CharField(max_length=500, null=True)
-#     loc3 = models.CharField(max_length=500, null=True)
-#     loc4 = models.CharField(max_length=500, null=True)
-#     loc5 = models.CharField(max_length=500, null=True)
-#     loc6 = models.CharField(max_length=500, null=True)
-#     loc7 = models.CharField(max_length=500, null=True)
-#     loc8 = models.CharField(max_length=500, null=True)
-#     loc9 = models.CharField(max_length=500, null=True)
+class ParsedProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=250)
+    header = models.CharField(max_length=500, null=True)
+    url = models.CharField(max_length=500)
+    school = models.CharField(max_length=500, null=True)
+    school_program = models.CharField(max_length=500, null=True)
+
+
+class JobTitle(models.Model):
+    profile = models.ForeignKey(ParsedProfile, on_delete=models.CASCADE)
+    job = models.CharField(max_length=500, null=True)
+
+
+class Location(models.Model):
+    profile = models.ForeignKey(ParsedProfile, on_delete=models.CASCADE)
+    loc = models.CharField(max_length=500, default=None)
 
 
 # Below is All The Profiles that were originally in DB and added new ones by User
