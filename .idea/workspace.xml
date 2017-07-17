@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4a95e68-07ac-4037-be0b-d19f7b41bbbf" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/link_rec/link_new/edu_classification.py" afterPath="$PROJECT_DIR$/link_rec/link_new/edu_classification.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/link_rec/link_new/new_classification.py" afterPath="$PROJECT_DIR$/link_rec/link_new/new_classification.py" />
     </list>
     <ignored path="linkedin_recommend.iws" />
@@ -17,6 +18,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/linkedin_recommend$dump_profile.coverage" NAME="dump_profile Coverage Results" MODIFIED="1499738548238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new" />
     <SUITE FILE_PATH="coverage/linkedin_recommend$new_classification.coverage" NAME="new_classification Coverage Results" MODIFIED="1500301171172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new" />
+    <SUITE FILE_PATH="coverage/linkedin_recommend$edu_classification.coverage" NAME="edu_classification Coverage Results" MODIFIED="1500301394883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new" />
     <SUITE FILE_PATH="coverage/linkedin_recommend$x.coverage" NAME="x Coverage Results" MODIFIED="1499737799439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new/files" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -68,27 +70,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new_classification.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="new_classification.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/link_rec/link_new/new_classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="341" column="35" selection-start-line="341" selection-start-column="35" selection-end-line="341" selection-end-column="35" />
+            <state relative-caret-position="465">
+              <caret line="339" column="0" selection-start-line="339" selection-start-column="2" selection-end-line="342" selection-end-column="23" />
               <folding>
-                <marker date="1500301168000" expanded="true" signature="660:696" ph="SELECT job F... link_rec_alljobtitle" />
-                <marker date="1500301168000" expanded="true" signature="781:817" ph="SELECT loc F... link_rec_alllocation" />
-                <marker date="1500301168000" expanded="true" signature="901:942" ph="SELECT url F... link_rec_allparsedprofile" />
+                <marker date="1500301425000" expanded="true" signature="660:696" ph="SELECT job F... link_rec_alljobtitle" />
+                <marker date="1500301425000" expanded="true" signature="781:817" ph="SELECT loc F... link_rec_alllocation" />
+                <marker date="1500301425000" expanded="true" signature="901:942" ph="SELECT url F... link_rec_allparsedprofile" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="classification.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/link_rec/link_new/junk/classification.py">
+      <file leaf-file-name="edu_classification.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/link_rec/link_new/edu_classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="67" selection-end-column="45" />
+            <state relative-caret-position="288">
+              <caret line="207" column="35" selection-start-line="207" selection-start-column="35" selection-end-line="207" selection-end-column="35" />
               <folding>
-                <element signature="e#0#46#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
+                <marker date="1500301425000" expanded="true" signature="660:712" ph="SELECT schoo... link_rec_allparsedprofile" />
               </folding>
             </state>
           </provider>
@@ -117,6 +120,7 @@
         <option value="$PROJECT_DIR$/link_rec/link_new/dump_profile.py" />
         <option value="$PROJECT_DIR$/link_rec/link_new/job_classified" />
         <option value="$PROJECT_DIR$/link_rec/link_new/new_classification.py" />
+        <option value="$PROJECT_DIR$/link_rec/link_new/edu_classification.py" />
       </list>
     </option>
   </component>
@@ -291,7 +295,7 @@
       <recent name="$PROJECT_DIR$/link_rec/link_new/junk" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.new_classification">
+  <component name="RunManager" selected="Python.edu_classification">
     <configuration default="false" name="x" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -342,6 +346,24 @@
       <module name="linkedin_recommend" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/link_rec/link_new/new_classification.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="edu_classification" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/link_rec/link_new" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="linkedin_recommend" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/link_rec/link_new/edu_classification.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -601,17 +623,19 @@
       <option name="customRunCommand" value="" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Django server.linkedin_recommend" />
       <item index="1" class="java.lang.String" itemvalue="Python.x" />
       <item index="2" class="java.lang.String" itemvalue="Python.dump_profile" />
       <item index="3" class="java.lang.String" itemvalue="Python.new_classification" />
+      <item index="4" class="java.lang.String" itemvalue="Python.edu_classification" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.new_classification" />
-        <item index="1" class="java.lang.String" itemvalue="Python.dump_profile" />
-        <item index="2" class="java.lang.String" itemvalue="Python.x" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.edu_classification" />
+        <item index="1" class="java.lang.String" itemvalue="Python.new_classification" />
+        <item index="2" class="java.lang.String" itemvalue="Python.dump_profile" />
+        <item index="3" class="java.lang.String" itemvalue="Python.x" />
       </list>
     </recent_temporary>
   </component>
@@ -892,16 +916,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/link_new/junk/classification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="67" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/link_rec/link_new/new_classification_job">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3720">
@@ -910,14 +924,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/link_rec/link_new/junk/classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_rec/link_new/new_classification_edu">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2447">
+          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/link_rec/link_new/new_classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="341" column="35" selection-start-line="341" selection-start-column="35" selection-end-line="341" selection-end-column="35" />
+        <state relative-caret-position="465">
+          <caret line="339" column="0" selection-start-line="339" selection-start-column="2" selection-end-line="342" selection-end-column="23" />
           <folding>
-            <marker date="1500301168000" expanded="true" signature="660:696" ph="SELECT job F... link_rec_alljobtitle" />
-            <marker date="1500301168000" expanded="true" signature="781:817" ph="SELECT loc F... link_rec_alllocation" />
-            <marker date="1500301168000" expanded="true" signature="901:942" ph="SELECT url F... link_rec_allparsedprofile" />
+            <marker date="1500301425000" expanded="true" signature="660:696" ph="SELECT job F... link_rec_alljobtitle" />
+            <marker date="1500301425000" expanded="true" signature="781:817" ph="SELECT loc F... link_rec_alllocation" />
+            <marker date="1500301425000" expanded="true" signature="901:942" ph="SELECT url F... link_rec_allparsedprofile" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_rec/link_new/edu_classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="207" column="35" selection-start-line="207" selection-start-column="35" selection-end-line="207" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+            <marker date="1500301425000" expanded="true" signature="660:712" ph="SELECT schoo... link_rec_allparsedprofile" />
           </folding>
         </state>
       </provider>

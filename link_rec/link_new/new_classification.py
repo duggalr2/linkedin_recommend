@@ -337,10 +337,10 @@ classifier.fit(X_train, Y)
 predicted = classifier.predict(X_train)
 all_labels = mlb.inverse_transform(predicted)
 
-with open('new_classification_job', 'a') as f:
-    for item, labels in zip(X_train, all_labels):
-        f.write('{0} => {1}'.format(item, ', '.join(labels)))
-        f.write('\n')
+# with open('new_classification_job', 'a') as f:
+#     for item, labels in zip(X_train, all_labels):
+#         f.write('{0} => {1}'.format(item, ', '.join(labels)))
+#         f.write('\n')
         # print('{0} => {1}'.format(item, ', '.join(labels)))
 
 

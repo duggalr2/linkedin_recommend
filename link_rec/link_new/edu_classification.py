@@ -5,7 +5,7 @@ from nltk.stem.snowball import SnowballStemmer
 import operator
 import re
 import matplotlib.pyplot as plt
-import kNN
+# import kNN
 import numpy as np
 from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import CountVectorizer
@@ -216,5 +216,10 @@ classifier.fit(X_train, Y)
 predicted = classifier.predict(X_train)
 all_labels = mlb.inverse_transform(predicted)
 
-for item, labels in zip(X_train, all_labels):
-    print('{0} => {1}'.format(item, ', '.join(labels)))
+# for item, labels in zip(X_train, all_labels):
+#     print('{0} => {1}'.format(item, ', '.join(labels)))
+
+# with open('new_classification_edu', 'a') as f:
+#     for item, labels in zip(X_train, all_labels):
+#         f.write('{0} => {1}'.format(item, ', '.join(labels)))
+#         f.write('\n')
