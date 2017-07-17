@@ -5,7 +5,7 @@ from nltk.stem.snowball import SnowballStemmer
 import operator
 import re
 import matplotlib.pyplot as plt
-import kNN
+# import kNN
 import numpy as np
 from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import CountVectorizer
@@ -266,19 +266,19 @@ for line in lines:
     big_list.append((new_line[:-1], new_line[-1]))
 
 
-def training_classification(data, label, bagOfWords, k=3):
-    """
-    kNN Model Based Classifier for the Training Set data;
-    Parameters: -
-    """
-    errCount = 0
-    for i in range(len(bagOfWords)):
-        x = kNN.classify(np.array(bagOfWords[i]), np.array(bagOfWords), label, k)
-        # print(data[i], x, label[i])
-        if x != label[i]:
-            errCount += 1
-            print(data[i], x, label[i])
-    return (errCount / len(bagOfWords)) * 100
+# def training_classification(data, label, bagOfWords, k=3):
+#     """
+#     kNN Model Based Classifier for the Training Set data;
+#     Parameters: -
+#     """
+#     errCount = 0
+#     for i in range(len(bagOfWords)):
+#         x = kNN.classify(np.array(bagOfWords[i]), np.array(bagOfWords), label, k)
+#         # print(data[i], x, label[i])
+#         if x != label[i]:
+#             errCount += 1
+#             print(data[i], x, label[i])
+#     return (errCount / len(bagOfWords)) * 100
 
 
 def searchBS(big_list):
@@ -337,8 +337,11 @@ classifier.fit(X_train, Y)
 predicted = classifier.predict(X_train)
 all_labels = mlb.inverse_transform(predicted)
 
-for item, labels in zip(X_train, all_labels):
-    print('{0} => {1}'.format(item, ', '.join(labels)))
+with open('new_classification_job', 'a') as f:
+    for item, labels in zip(X_train, all_labels):
+        f.write('{0} => {1}'.format(item, ', '.join(labels)))
+        f.write('\n')
+        # print('{0} => {1}'.format(item, ', '.join(labels)))
 
 
 
