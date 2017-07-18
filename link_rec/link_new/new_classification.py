@@ -248,7 +248,6 @@ crypto, crypto_empty = crypto()
 # print('Done')
 
 
-
 def vocabSet(data):
     """
     Create's a Vocab Set: List of unique word's
@@ -275,11 +274,15 @@ def bag_of_words(vocabSet, row):
 lines = open('job_classified').readlines()
 lines = [line.replace('\n', '') for line in lines]
 job_list, job_class, big_list = [], [], []
+test = []
 for line in lines:
     new_line = line.split(', ')
-    job_class.append(new_line[-1])
-    job_list.append(new_line[:-1])
-    big_list.append((new_line[:-1], new_line[-1]))
+    if len(new_line) == 1:
+        test.append(new_line[0])
+    else:
+        job_class.append(new_line[-1])
+        job_list.append(new_line[:-1])
+        big_list.append((new_line[:-1], new_line[-1]))
 
 
 # def training_classification(data, label, bagOfWords, k=3):
@@ -324,6 +327,7 @@ def searchBS(big_list):
 
 # Multi-label kNN Classification
 
+
 li = searchBS(big_list)
 new_class = []
 new_job_title = []
@@ -350,16 +354,16 @@ classifier = Pipeline([
     ('clf', OneVsRestClassifier(LinearSVC()))])
 
 classifier.fit(X_train, Y)
-predicted = classifier.predict(X_train)
+predicted = classifier.predict(np.array(test))
 all_labels = mlb.inverse_transform(predicted)
 
-# for item, labels in zip(X_train, all_labels):
-#     print('{0} => {1}'.format(item, ', '.join(labels)))
+for item, labels in zip(X_train, all_labels):
+    print('{0} => {1}'.format(item, ', '.join(labels)))
 
-with open('new_classification_job', 'a') as f:
-    for item, labels in zip(X_train, all_labels):
-        f.write('{0} => {1}'.format(item, ', '.join(labels)))
-        f.write('\n')
+# with open('new_classification_job', 'a') as f:
+#     for item, labels in zip(X_train, all_labels):
+#         f.write('{0} => {1}'.format(item, ', '.join(labels)))
+#         f.write('\n')
 
 
 
