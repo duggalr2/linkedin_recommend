@@ -15,6 +15,8 @@ from sklearn.multiclass import OneVsRestClassifier
 from sklearn.preprocessing import MultiLabelBinarizer
 
 
+# TODO: Classifier needs to be automatic in updating the file.... needs to classify from sql, not from files smh!
+
 def get_job_title():
     conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
     c = conn.cursor()
@@ -54,36 +56,16 @@ def stem_for_regex(items):
     return [y for i in x for y in i]
 
 
-# print(stem_for_regex(['cryptography', 'crypto', 'blockchain', 'ethereum']))
-# print(stem_for_regex(['fellow']))
-
-# l = ['mechanical', 'industrial', 'skule', 'drilling', 'robotic', 'electrical']
-# print(stem_for_regex(l))
-
-
-# l = ['financial', 'accounts payable', 'records clerk', 'business', 'business development',
-#      'business analyst', 'operations', 'logistics', 'marketing', 'business intelligence',
-#      'digital marketing',  'investment', 'investment banking', 'capital markets',
-#      'venture', 'mergers', 'acquisitions', 'consultant', 'accountant', 'private equity']
-# print(stem_for_regex(l))
-
-# l = ['co-founder', 'founder', 'president', 'chief executive officer', 'vice-president']
-# print(stem_for_regex(l))
-
-
 def filterPick(list, filter, classification):
     """Used for applying the regex search"""
     y = []
     empty = []
     for job in list:
-        # x = [(job, m.group(1)) for l in job for m in (filter(l),) if m]
         x = [(job, classification) for l in job for m in (filter(l),) if m]
+        if len(x) == 0:
+            empty.append(' '.join(job))
         y.append(x)
-        # if len(x) == 0:
-        #     empty.append(job)
-    return y
-    # return empty
-    # return [ ( l, m.group(1) ) for l in list for m in (filter(l),) if m]
+    return y, empty
 
 
 def software():
@@ -95,7 +77,6 @@ def software():
 
 def engineer():
     new_title_list = [tokenize_and_stem(i) for i in job_title]
-    # ['mechan', 'industri', 'skule', 'drill', 'robot', 'electr']
     searchRegex = re.compile(
         '(mechan|industri|skule|drill|robot|electr)').search
     x = filterPick(new_title_list, searchRegex, 'engineering')
@@ -136,9 +117,6 @@ def product():
 
 def finance():
     new_title_list = [tokenize_and_stem(i) for i in job_title]
-    # ['financi', 'account', 'payabl', 'record', 'clerk', 'busi', 'busi', 'develop', 'busi', 'analyst', 'oper', 'logist',
-    #  'market', 'busi', 'intellig', 'digit', 'market', 'invest', 'invest', 'bank', 'capit', 'market', 'ventur', 'merger',
-    #  'acquisit', 'consult', 'account', 'privat', 'equiti']
     searchRegex = re.compile(
         '(chair|financi|account payabl|record clerk|busi develop|busi|busi analyst|oper|logist|market|busi intellig|digit market|invest|invest bank|capit|capit market|ventur|merger|acquisit|consult|account|privat|equiti)').search
     x = filterPick(new_title_list, searchRegex, 'business and finance')
@@ -192,12 +170,12 @@ def count(data):
     return main_di
 
 
-lines = open('job_classified').readlines()
-lines = [line.replace('\n', '') for line in lines]
-classification = []
-for i in lines:
-    c = i.split(',')[-1]
-    classification.append(c)
+# lines = open('job_classified').readlines()
+# lines = [line.replace('\n', '') for line in lines]
+# classification = []
+# for i in lines:
+#     c = i.split(',')[-1]
+#     classification.append(c)
 
 
 def barGraph(data_count):
@@ -223,26 +201,52 @@ def barGraph(data_count):
 # data_count = count(classification)
 # barGraph(data_count)
 
-# software = software()
+
+software, software_empty = software()
+finance, finance_empty = finance()
+product, product_empty = product()
+startup, startup_empty = startup()
+data, data_empty = data()
+design, design_empty = design()
+research, research_empty = research()
+engineer, engineer_empty = engineer()
+admin, admin_empty= admin_it()
+crypto, crypto_empty = crypto()
+
 # write_to_file(software)
-# finance = finance()
 # write_to_file(finance)
-# product = product()
 # write_to_file(product)
-# startup = startup()
 # write_to_file(startup)
-# data = data()
 # write_to_file(data)
-# design = design()
 # write_to_file(design)
-# research = research()
 # write_to_file(research)
-# engineer = engineer()
 # write_to_file(engineer)
-# admin = admin_it()
 # write_to_file(admin)
-# crypto = crypto()
 # write_to_file(crypto)
+#
+#
+# empty_list = []
+# empty_list.extend(software_empty)
+# empty_list.extend(finance_empty)
+# empty_list.extend(product_empty)
+# empty_list.extend(startup_empty)
+# empty_list.extend(data_empty)
+# empty_list.extend(design_empty)
+# empty_list.extend(research_empty)
+# empty_list.extend(engineer_empty)
+# empty_list.extend(admin_empty)
+# empty_list.extend(crypto_empty)
+#
+# empty_list = list(set(empty_list))
+# # for i in empty_list:
+# #     print(i)
+#
+# with open('job_classified', 'a') as f:
+#     for job in empty_list:
+#         f.write(job + '\n')
+#
+# print('Done')
+
 
 
 def vocabSet(data):
@@ -349,11 +353,14 @@ classifier.fit(X_train, Y)
 predicted = classifier.predict(X_train)
 all_labels = mlb.inverse_transform(predicted)
 
-# with open('new_classification_job', 'a') as f:
-#     for item, labels in zip(X_train, all_labels):
-#         f.write('{0} => {1}'.format(item, ', '.join(labels)))
-#         f.write('\n')
-        # print('{0} => {1}'.format(item, ', '.join(labels)))
+# for item, labels in zip(X_train, all_labels):
+#     print('{0} => {1}'.format(item, ', '.join(labels)))
+
+with open('new_classification_job', 'a') as f:
+    for item, labels in zip(X_train, all_labels):
+        f.write('{0} => {1}'.format(item, ', '.join(labels)))
+        f.write('\n')
+
 
 
 

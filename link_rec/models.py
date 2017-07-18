@@ -66,23 +66,23 @@ def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
 
 
-class ParsedProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=250)
-    header = models.CharField(max_length=500, null=True)
-    url = models.CharField(max_length=500)
-    school = models.CharField(max_length=500, null=True)
-    school_program = models.CharField(max_length=500, null=True)
-
-
-class JobTitle(models.Model):
-    profile = models.ForeignKey(ParsedProfile, on_delete=models.CASCADE)
-    job = models.CharField(max_length=500, null=True)
-
-
-class Location(models.Model):
-    profile = models.ForeignKey(ParsedProfile, on_delete=models.CASCADE)
-    loc = models.CharField(max_length=500, default=None)
+# class ParsedProfile(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE)
+#     name = models.CharField(max_length=250)
+#     header = models.CharField(max_length=500, null=True)
+#     url = models.CharField(max_length=500)
+#     school = models.CharField(max_length=500, null=True)
+#     school_program = models.CharField(max_length=500, null=True)
+#
+#
+# class JobTitle(models.Model):
+#     profile = models.ForeignKey(ParsedProfile, on_delete=models.CASCADE)
+#     job = models.CharField(max_length=500, null=True)
+#
+#
+# class Location(models.Model):
+#     profile = models.ForeignKey(ParsedProfile, on_delete=models.CASCADE)
+#     loc = models.CharField(max_length=500, default=None)
 
 
 # Below is All The Profiles that were originally in DB and added new ones by User

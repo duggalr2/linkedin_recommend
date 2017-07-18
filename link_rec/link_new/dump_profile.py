@@ -107,11 +107,12 @@ def clean_header(header_list):
         return name, title, url
 
 
+# TODO: FIX THIS FUNCTION BELOW!!
 def parse_profiles_to_db(filename, start_iter=0, end_iter=100, interval=7):
     conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
     c = conn.cursor()
     lines = open_file(filename)
-    id = 106
+    id = 211
     num = 0
 
     while interval <= end_iter:
@@ -142,19 +143,57 @@ def parse_profiles_to_db(filename, start_iter=0, end_iter=100, interval=7):
 
     print('Done')
 
-# TODO: Implement a login checker <-- checks if site is @ login page or not..
 
-if __name__ == '__main__':
-    linkedin = linkedin_parser.Linkedin()
-    linkedin.linkedin_login()
-    # lines = open_file('linkedin_dest_url')
-    # y = linkedin.get_person_information('https://www.linkedin.com/in/davidpecile/')
-    # print(y)
-    # print(get_education_data(y))
-    # dump_profiles(2)
-    # parse_profiles_to_db('linkedin_dest_url', 0, 100, 7)
-    # profile_id = 105
+# if __name__ == '__main__':
+#     linkedin = linkedin_parser.Linkedin()
+#     linkedin.linkedin_login()
+    # parse_profiles_to_db('linkedin_dest_url', 0, 5, 5)
+
     # conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
     # c = conn.cursor()
-    # c.execute('UPDATE link_rec_alljobtitle SET profile_id=%s' % 106)
+    # lines = open_file('linkedin_dest_url')
+    # id = 864
+    # num = 0
+    #
+    # for url in lines:
+    #     info_dict = linkedin.get_person_information(url)
+    #
+    #     if info_dict is not None:
+    #         university_name, university_program = get_education_data(info_dict)
+    #         experience_list = info_dict.get('experience')
+    #         header_list = info_dict.get('header')
+    #         new_header_list = clean_header(header_list)
+    #         clean_education(university_name, university_program, new_header_list, c, conn)
+    #         clean_experience(id, experience_list, header_list, c, conn)
+    #         id += 1
+    #         conn.commit()
+    #
+    #     else:
+    #         continue
 
+
+    # while interval <= end_iter:
+    #
+    #     if num == 7:
+    #         time.sleep(25)
+    #         num = 0
+    #         start_iter += 7
+    #         interval += 7
+    #
+    #     for url in lines[start_iter:interval]:
+    #         info_dict = linkedin.get_person_information(url)
+    #
+    #         if info_dict is not None:
+    #             university_name, university_program = get_education_data(info_dict)
+    #             experience_list = info_dict.get('experience')
+    #             header_list = info_dict.get('header')
+    #             new_header_list = clean_header(header_list)
+    #             clean_education(university_name, university_program, new_header_list, c, conn)
+    #             clean_experience(id, experience_list, header_list, c, conn)
+    #             id += 1
+    #             conn.commit()
+    #
+    #         else:
+    #             continue
+    #
+    #         num += 1
