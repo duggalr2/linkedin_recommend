@@ -41,6 +41,8 @@ def tokenize_and_stem(text):
     # filter out any tokens not containing letters (e.g., numeric tokens, raw punctuation)
     for token in tokens:
         if re.search('[a-zA-Z]', token):
+            if 'intern' == token:
+                token = ''
             filtered_tokens.append(token)
     stems = [stemmer.stem(t) for t in filtered_tokens]
     return stems
@@ -61,7 +63,7 @@ def filterPick(list, filter, classification):
 def software():
     new_title_list = [tokenize_and_stem(i) for i in job_title]
     searchRegex = re.compile('(io|softwar|develop|thiel|innovation|websit|web|forward|deploy|develop|fullstack|python|java|agil|programm|applic|autopilot|fellow)').search
-    x = filterPick(new_title_list, searchRegex, 'software')
+    x = filterPick(new_title_list, searchRegex, 0)
     return x
 
 
@@ -69,7 +71,7 @@ def engineer():
     new_title_list = [tokenize_and_stem(i) for i in job_title]
     searchRegex = re.compile(
         '(mechan|industri|skule|drill|robot|electr)').search
-    x = filterPick(new_title_list, searchRegex, 'engineering')
+    x = filterPick(new_title_list, searchRegex, 1)
     return x
 
 
@@ -77,7 +79,7 @@ def research():
     new_title_list = [tokenize_and_stem(i) for i in job_title]
     searchRegex = re.compile(
         '(research|lectur)').search
-    x = filterPick(new_title_list, searchRegex, 'research')
+    x = filterPick(new_title_list, searchRegex, 2)
     return x
 
 
@@ -85,7 +87,7 @@ def design():
     new_title_list = [tokenize_and_stem(i) for i in job_title]
     searchRegex = re.compile(
         '(design)').search
-    x = filterPick(new_title_list, searchRegex, 'design')
+    x = filterPick(new_title_list, searchRegex, 3)
     return x
 
 
@@ -93,7 +95,7 @@ def data():
     new_title_list = [tokenize_and_stem(i) for i in job_title]
     searchRegex = re.compile(
         '(data|scien|big data|data vi|data analy|machine learning)').search
-    x = filterPick(new_title_list, searchRegex, 'data science')
+    x = filterPick(new_title_list, searchRegex, 4)
     return x
 
 
@@ -101,7 +103,7 @@ def product():
     new_title_list = [tokenize_and_stem(i) for i in job_title]
     searchRegex = re.compile(
         '(product)').search
-    x = filterPick(new_title_list, searchRegex, 'product manager')
+    x = filterPick(new_title_list, searchRegex, 5)
     return x
 
 
@@ -109,7 +111,7 @@ def finance():
     new_title_list = [tokenize_and_stem(i) for i in job_title]
     searchRegex = re.compile(
         '(chair|financi|account payabl|record clerk|busi develop|busi|busi analyst|oper|logist|market|busi intellig|digit market|invest|invest bank|capit|capit market|ventur|merger|acquisit|consult|account|privat|equiti)').search
-    x = filterPick(new_title_list, searchRegex, 'business and finance')
+    x = filterPick(new_title_list, searchRegex, 6)
     return x
 
 
@@ -117,7 +119,7 @@ def startup():
     new_title_list = [tokenize_and_stem(i) for i in job_title]
     searchRegex = re.compile(
         '(co-found|founder|presid|chief|execut|offic|vice-presid|cofound)').search
-    x = filterPick(new_title_list, searchRegex, 'startup founder')
+    x = filterPick(new_title_list, searchRegex, 7)
     return x
 
 
@@ -125,7 +127,7 @@ def admin_it(): # admin/hr/coordination/it
     new_title_list = [tokenize_and_stem(i) for i in job_title]
     searchRegex = re.compile(
         '(administr|coordin|repres|ambassador|teach|talent)').search
-    x = filterPick(new_title_list, searchRegex, 'admin/coordination/it')
+    x = filterPick(new_title_list, searchRegex, 8)
     return x
 
 
@@ -133,7 +135,7 @@ def crypto():
     new_title_list = [tokenize_and_stem(i) for i in job_title]
     searchRegex = re.compile(
         '(cryptographi|blockchain|crypto|ethereum)').search
-    x = filterPick(new_title_list, searchRegex, 'crypto/blockchain')
+    x = filterPick(new_title_list, searchRegex, 9)
     return x
 
 
@@ -143,11 +145,11 @@ def write_to_file(items):
             with open('job_classified', 'a') as f:
                 job = ' '.join(i[0][0])
                 classification = i[0][1]
-                f.write(job + ', ' + classification + '\n')
+                f.write(job + ', ' + str(classification) + '\n')
 
 
-# if __name__ == '__main__':
-#     software, software_empty = software()
+if __name__ == '__main__':
+    software, software_empty = software()
 #     finance, finance_empty = finance()
 #     product, product_empty = product()
 #     startup, startup_empty = startup()

@@ -45,5 +45,7 @@ tokens['five'] = tokens.five / nb.class_count_[1]
 
 tokens['five_star_ratio'] = tokens.five / tokens.one
 tokens['one_star_ratio'] = tokens.one / tokens.five
-print(tokens.sort_values('five_star_ratio', ascending=False).head(10))  # top 10 tokens predictive for 5-star
-print(tokens.sort_values('one_star_ratio', ascending=False).head(10))  # top 10 tokens predictive for 1-star
+# print(tokens.sort_values('five_star_ratio', ascending=False).head(10))  # top 10 tokens predictive for 5-star
+# print(tokens.sort_values('one_star_ratio', ascending=False).head(10))  # top 10 tokens predictive for 1-star
+
+
