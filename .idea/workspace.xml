@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4a95e68-07ac-4037-be0b-d19f7b41bbbf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tutorial ML with text in sckit/tutorial.py" afterPath="$PROJECT_DIR$/Tutorial ML with text in sckit/tutorial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tutorial ML with text in sckit/yelp.py" afterPath="$PROJECT_DIR$/Tutorial ML with text in sckit/yelp.py" />
     </list>
     <ignored path="linkedin_recommend.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,7 +22,7 @@
     <SUITE FILE_PATH="coverage/linkedin_recommend$edu_classification.coverage" NAME="edu_classification Coverage Results" MODIFIED="1500333293509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new" />
     <SUITE FILE_PATH="coverage/linkedin_recommend$tutorial.coverage" NAME="tutorial Coverage Results" MODIFIED="1501038365329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tutorial ML with text in sckit" />
     <SUITE FILE_PATH="coverage/linkedin_recommend$x.coverage" NAME="x Coverage Results" MODIFIED="1499737799439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new/files" />
-    <SUITE FILE_PATH="coverage/linkedin_recommend$yelp.coverage" NAME="yelp Coverage Results" MODIFIED="1501040476389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tutorial ML with text in sckit" />
+    <SUITE FILE_PATH="coverage/linkedin_recommend$yelp.coverage" NAME="yelp Coverage Results" MODIFIED="1501085229658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tutorial ML with text in sckit" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -46,9 +46,11 @@
       <file leaf-file-name="tutorial.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tutorial ML with text in sckit/tutorial.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-660">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="540">
+              <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,8 +58,8 @@
       <file leaf-file-name="yelp.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tutorial ML with text in sckit/yelp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="570">
+              <caret line="48" column="108" selection-start-line="48" selection-start-column="108" selection-end-line="48" selection-end-column="108" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -135,8 +137,8 @@
         <option value="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/regex.py" />
         <option value="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/new_classification.py" />
         <option value="$PROJECT_DIR$/Tutorial ML with text in sckit/sms" />
-        <option value="$PROJECT_DIR$/Tutorial ML with text in sckit/tutorial.py" />
         <option value="$PROJECT_DIR$/Tutorial ML with text in sckit/yelp.csv" />
+        <option value="$PROJECT_DIR$/Tutorial ML with text in sckit/tutorial.py" />
         <option value="$PROJECT_DIR$/Tutorial ML with text in sckit/yelp.py" />
       </list>
     </option>
@@ -220,6 +222,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="FullScreen" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/Tutorial ML with text in sckit/yelp.py" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -617,7 +620,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5334282" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5064011" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1019,16 +1022,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tutorial ML with text in sckit/tutorial.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-660">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="540">
+          <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tutorial ML with text in sckit/yelp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="570">
+          <caret line="48" column="108" selection-start-line="48" selection-start-column="108" selection-end-line="48" selection-end-column="108" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
