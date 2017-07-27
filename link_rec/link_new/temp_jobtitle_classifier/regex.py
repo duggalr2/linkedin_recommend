@@ -43,8 +43,12 @@ def tokenize_and_stem(text):
         if re.search('[a-zA-Z]', token):
             if 'intern' == token:
                 token = ''
+            if 'student' == token:
+                token = ''
+            if 'and' == token:
+                token = ''
             filtered_tokens.append(token)
-    stems = [stemmer.stem(t) for t in filtered_tokens]
+    stems = [stemmer.stem(t) for t in filtered_tokens if len(t) > 0]
     return stems
 
 
@@ -148,8 +152,51 @@ def write_to_file(items):
                 f.write(job + ', ' + str(classification) + '\n')
 
 
-if __name__ == '__main__':
-    software, software_empty = software()
+def tuple_append(lst):
+    start = 0
+    while start < len(lst):
+        new_index = start
+        while new_index < len(lst):
+            if lst[start][0] == lst[new_index][0]:
+                if lst[start][1] != lst[new_index][1]:
+                    lst[start].append(lst[new_index][1])
+                    del lst[new_index]
+                    new_index -= 1
+            new_index += 1
+        start += 1
+
+
+lines = open('job_classified').readlines()
+lines = [line.replace('\n', '') for line in lines]
+job_list, job_class, big_list = [], [], []
+test = []
+for line in lines:
+    new_line = line.split(', ')
+    if len(new_line) == 1:
+        test.append(new_line[0])
+    else:
+        job_class.append(new_line[-1])
+        job_list.append(new_line[:-1])
+        big_list.append(list((' '.join(new_line[:-1]), new_line[-1])))
+
+tuple_append(big_list)
+with open('job_classified', 'w') as f:
+    for i in big_list:
+        if len(i) == 2:
+            job = i[0]
+            label = i[-1]
+            # print(job, label)
+            f.write(job + '=>' + str(label) + '\n')
+
+        elif len(i) > 2:
+            job = i[0]
+            label = i[1:] # list
+            # print(job, ', '.join(label))
+            f.write(job + '=>' + ', '.join(label) + '\n')
+
+
+# if __name__ == '__main__':
+#     software, software_empty = software()
 #     finance, finance_empty = finance()
 #     product, product_empty = product()
 #     startup, startup_empty = startup()
@@ -170,6 +217,10 @@ if __name__ == '__main__':
 #     write_to_file(engineer)
 #     write_to_file(admin)
 #     write_to_file(crypto)
+
+
+
+
 
     # empty_list = []
     # empty_list.extend(software_empty)

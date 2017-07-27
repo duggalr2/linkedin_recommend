@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4a95e68-07ac-4037-be0b-d19f7b41bbbf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/new_classification_job" afterPath="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/new_classification_job" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/tuplething.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/link_rec/link_new/tuplething.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tutorial ML with text in sckit/yelp.py" afterPath="$PROJECT_DIR$/Tutorial ML with text in sckit/yelp.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/job_classified" afterPath="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/job_classified" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/nb_classification.py" afterPath="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/nb_classification.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/regex.py" afterPath="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/regex.py" />
     </list>
     <ignored path="linkedin_recommend.iws" />
@@ -20,15 +21,15 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/linkedin_recommend$dump_profile.coverage" NAME="dump_profile Coverage Results" MODIFIED="1500345565671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new" />
-    <SUITE FILE_PATH="coverage/linkedin_recommend$tuplething.coverage" NAME="tuplething Coverage Results" MODIFIED="1500477932176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new" />
     <SUITE FILE_PATH="coverage/linkedin_recommend$yelp_multilabel.coverage" NAME="yelp_multilabel Coverage Results" MODIFIED="1501085705104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tutorial ML with text in sckit" />
+    <SUITE FILE_PATH="coverage/linkedin_recommend$tuplething.coverage" NAME="tuplething Coverage Results" MODIFIED="1501105588531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new" />
     <SUITE FILE_PATH="coverage/linkedin_recommend$new_classification.coverage" NAME="new_classification Coverage Results" MODIFIED="1500952138297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new" />
-    <SUITE FILE_PATH="coverage/linkedin_recommend$regex.coverage" NAME="regex Coverage Results" MODIFIED="1501102251597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier" />
+    <SUITE FILE_PATH="coverage/linkedin_recommend$regex.coverage" NAME="regex Coverage Results" MODIFIED="1501164691701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier" />
     <SUITE FILE_PATH="coverage/linkedin_recommend$edu_classification.coverage" NAME="edu_classification Coverage Results" MODIFIED="1500333293509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new" />
     <SUITE FILE_PATH="coverage/linkedin_recommend$tutorial.coverage" NAME="tutorial Coverage Results" MODIFIED="1501038365329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tutorial ML with text in sckit" />
     <SUITE FILE_PATH="coverage/linkedin_recommend$x.coverage" NAME="x Coverage Results" MODIFIED="1499737799439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new/files" />
     <SUITE FILE_PATH="coverage/linkedin_recommend$yelp.coverage" NAME="yelp Coverage Results" MODIFIED="1501085229658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tutorial ML with text in sckit" />
-    <SUITE FILE_PATH="coverage/linkedin_recommend$nb_classification.coverage" NAME="nb_classification Coverage Results" MODIFIED="1501101601956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier" />
+    <SUITE FILE_PATH="coverage/linkedin_recommend$nb_classification.coverage" NAME="nb_classification Coverage Results" MODIFIED="1501165203070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -51,11 +52,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="regex.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/regex.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="219" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+                <marker date="1501164689000" expanded="true" signature="480:516" ph="SELECT job F... link_rec_alljobtitle" />
+                <marker date="1501164689000" expanded="true" signature="601:637" ph="SELECT loc F... link_rec_alllocation" />
+                <marker date="1501164689000" expanded="true" signature="721:762" ph="SELECT url F... link_rec_allparsedprofile" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="nb_classification.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/nb_classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -63,17 +79,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="regex.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/regex.py">
+      <file leaf-file-name="edu_classification.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/edu_classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="147" column="45" selection-start-line="147" selection-start-column="45" selection-end-line="147" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-                <marker date="1501102261000" expanded="true" signature="480:516" ph="SELECT job F... link_rec_alljobtitle" />
-                <marker date="1501102261000" expanded="true" signature="601:637" ph="SELECT loc F... link_rec_alllocation" />
-                <marker date="1501102261000" expanded="true" signature="721:762" ph="SELECT url F... link_rec_allparsedprofile" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,8 +102,8 @@
       <file leaf-file-name="yelp_multilabel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tutorial ML with text in sckit/yelp_multilabel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+            <state relative-caret-position="120">
+              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -124,7 +135,6 @@
         <option value="$PROJECT_DIR$/link_rec/link_new/dump_profile.py" />
         <option value="$PROJECT_DIR$/link_rec/link_new/new_classification_job" />
         <option value="$PROJECT_DIR$/link_rec/link_new/job_classified" />
-        <option value="$PROJECT_DIR$/link_rec/link_new/tuplething.py" />
         <option value="$PROJECT_DIR$/link_rec/link_new/new_classification.py" />
         <option value="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/new_classification.py" />
         <option value="$PROJECT_DIR$/Tutorial ML with text in sckit/sms" />
@@ -133,9 +143,12 @@
         <option value="$PROJECT_DIR$/Tutorial ML with text in sckit/yelp.py" />
         <option value="$PROJECT_DIR$/Tutorial ML with text in sckit/yelp_multilabel.py" />
         <option value="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/new_classification_job" />
-        <option value="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/nb_classification.py" />
+        <option value="$PROJECT_DIR$/link_rec/link_new/tuplething.py" />
+        <option value="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/tuplething.py" />
         <option value="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/job_classified" />
         <option value="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/regex.py" />
+        <option value="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/nb_classification.py" />
+        <option value="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/edu_classification.py" />
       </list>
     </option>
   </component>
@@ -280,25 +293,7 @@
       <recent name="$PROJECT_DIR$/link_rec/link_new/junk" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.regex">
-    <configuration default="false" name="tutorial" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tutorial ML with text in sckit" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="linkedin_recommend" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tutorial ML with text in sckit/tutorial.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.nb_classification">
     <configuration default="false" name="yelp" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -367,6 +362,24 @@
       <module name="linkedin_recommend" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/regex.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="tuplething" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/link_rec/link_new" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="linkedin_recommend" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/tuplething.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -628,19 +641,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Django server.linkedin_recommend" />
-      <item index="1" class="java.lang.String" itemvalue="Python.tutorial" />
-      <item index="2" class="java.lang.String" itemvalue="Python.yelp" />
-      <item index="3" class="java.lang.String" itemvalue="Python.yelp_multilabel" />
-      <item index="4" class="java.lang.String" itemvalue="Python.nb_classification" />
-      <item index="5" class="java.lang.String" itemvalue="Python.regex" />
+      <item index="1" class="java.lang.String" itemvalue="Python.yelp" />
+      <item index="2" class="java.lang.String" itemvalue="Python.yelp_multilabel" />
+      <item index="3" class="java.lang.String" itemvalue="Python.nb_classification" />
+      <item index="4" class="java.lang.String" itemvalue="Python.regex" />
+      <item index="5" class="java.lang.String" itemvalue="Python.tuplething" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.regex" />
-        <item index="1" class="java.lang.String" itemvalue="Python.nb_classification" />
-        <item index="2" class="java.lang.String" itemvalue="Python.yelp_multilabel" />
-        <item index="3" class="java.lang.String" itemvalue="Python.yelp" />
-        <item index="4" class="java.lang.String" itemvalue="Python.tutorial" />
+        <item index="0" class="java.lang.String" itemvalue="Python.nb_classification" />
+        <item index="1" class="java.lang.String" itemvalue="Python.regex" />
+        <item index="2" class="java.lang.String" itemvalue="Python.tuplething" />
+        <item index="3" class="java.lang.String" itemvalue="Python.yelp_multilabel" />
+        <item index="4" class="java.lang.String" itemvalue="Python.yelp" />
       </list>
     </recent_temporary>
   </component>
@@ -670,7 +683,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47226173" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6415363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -756,7 +769,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/link_new/tuplething.py">
+    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/tuplething.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
@@ -961,14 +974,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/link_new/tuplething.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/link_rec/link_new/dump_profile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1036,10 +1041,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/new_classification.py">
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2016.2/python_stubs/1012324243/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="475" column="4" selection-start-line="475" selection-start-column="4" selection-end-line="475" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/new_classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="87" column="46" selection-start-line="87" selection-start-column="46" selection-end-line="87" selection-end-column="46" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
             <marker date="1500952138000" expanded="true" signature="681:717" ph="SELECT job F... link_rec_alljobtitle" />
@@ -1049,21 +1062,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/job_classified">
+    <entry file="file://$PROJECT_DIR$/Tutorial ML with text in sckit/yelp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="449" column="10" selection-start-line="449" selection-start-column="10" selection-end-line="449" selection-end-column="10" />
+        <state relative-caret-position="540">
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tutorial ML with text in sckit/yelp_multilabel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        <state relative-caret-position="120">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/tuplething.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1077,34 +1098,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tutorial ML with text in sckit/yelp.py">
+    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/job_classified">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+        <state relative-caret-position="90">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/regex.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="219" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <marker date="1501164689000" expanded="true" signature="480:516" ph="SELECT job F... link_rec_alljobtitle" />
+            <marker date="1501164689000" expanded="true" signature="601:637" ph="SELECT loc F... link_rec_alllocation" />
+            <marker date="1501164689000" expanded="true" signature="721:762" ph="SELECT url F... link_rec_allparsedprofile" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/nb_classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="195">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/regex.py">
+    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/edu_classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="147" column="45" selection-start-line="147" selection-start-column="45" selection-end-line="147" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <marker date="1501102261000" expanded="true" signature="480:516" ph="SELECT job F... link_rec_alljobtitle" />
-            <marker date="1501102261000" expanded="true" signature="601:637" ph="SELECT loc F... link_rec_alllocation" />
-            <marker date="1501102261000" expanded="true" signature="721:762" ph="SELECT url F... link_rec_allparsedprofile" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
