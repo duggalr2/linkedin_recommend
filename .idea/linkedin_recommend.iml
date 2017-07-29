@@ -12,7 +12,18 @@
     </facet>
   </component>
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/link_rec" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/link_rec/.ropeproject" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/link_rec/link_new" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/link_rec/link_new/__pycache__2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/link_rec/link_new/files" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/link_rec/link_new/junk" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/link_rec/link_new/sample_chrome_extension" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/link_rec/link_new/temp_jobtitle_classifier" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tutorial ML with text in sckit" isTestSource="false" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

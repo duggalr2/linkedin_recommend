@@ -95,12 +95,14 @@ class AllParsedProfile(models.Model):
     url = models.CharField(max_length=500)
     school = models.CharField(max_length=500, null=True)
     school_program = models.CharField(max_length=500, null=True)
-    # url = models.CharField(max_length=500)
+    program_classification = models.IntegerField(null=True)  # TODO: Automatic classification with AJAX
+    # industry_classification = models.CharField(max_length=500, null=True)
 
 
 class AllJobTitle(models.Model):
     profile = models.ForeignKey(AllParsedProfile, on_delete=models.CASCADE)
     job = models.CharField(max_length=500, null=True)
+    job_classification = models.IntegerField(null=True)
     # job2 = models.CharField(max_length=500, null=True)
     # job3 = models.CharField(max_length=500, null=True)
     # job4 = models.CharField(max_length=500, null=True)
@@ -123,3 +125,6 @@ class AllLocation(models.Model):
     # loc7 = models.CharField(max_length=500, null=True)
     # loc8 = models.CharField(max_length=500, null=True)
     # loc9 = models.CharField(max_length=500, null=True)
+
+
+# ./manage.py graph_models -a -g -o my_project_visualized.png

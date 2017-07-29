@@ -107,7 +107,7 @@ def clean_header(header_list):
         return name, title, url
 
 
-# TODO: FIX THIS FUNCTION BELOW!!
+# TODO: FIX THIS FUNCTION BELOW! THE PROFILE ID IS COMPLETELY WRONG!
 def parse_profiles_to_db(filename, start_iter=0, end_iter=100, interval=7):
     conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
     c = conn.cursor()

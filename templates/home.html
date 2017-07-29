@@ -12,4 +12,14 @@
         <a href="{% url 'logout' %}">Logout</a>
     </li>
 
+    {% for i in industry_recommend %}
+        {{ i.job_loc_list }}
+    {% endfor %}
+
+    {% for i in content %}
+        {{ i }}
+    {% endfor %}
+
+
+
 {% endblock %}

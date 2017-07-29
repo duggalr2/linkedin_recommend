@@ -5,18 +5,14 @@ from django.contrib.auth import login, authenticate
 from link_rec.forms import SignUpForm
 from .models import Profile
 import ast
+from link_rec.link_new.temp_jobtitle_classifier import nb_classification
 
 
-@login_required(login_url='login/')
-def home(request):
-    y = Profile.objects.all()
-    return render(request, "home.html", {'content': y})
 
 
 #@login_required(login_url='login/')
 def personal_view(request):
 #    if request.method == 'GET':
-
     return render(request, 'button.html')
 
 
@@ -24,6 +20,7 @@ def parse_to_list(form_input):
     l = ast.literal_eval(form_input)
     l = [i.strip() for i in l]
     return l
+
 
 def signup(request):
     if request.method == 'POST':
@@ -36,11 +33,8 @@ def signup(request):
             school_program = form.cleaned_data.get('school_program')
             school_of_interest = form.cleaned_data.get('school_of_interest')
             industry_of_interest = form.cleaned_data.get('industry_of_interest')
-            # TODO: type's for both below are already lists.. just pass directly to
-            # TODO: script and don't need to have the parse_to_list function!
-            #print(type(industry_of_interest), type(school_of_interest))
-            #parsed_school_of_interest = parse_to_list(school_of_interest)
-            #parsed_industry_of_interest = parse_to_list(industry_of_interest)
+            # print(industry_of_interest)  # ['software', 'data_science', 'research']
+            li_industry = nb_classification.recommend_industry(industry_of_interest)
             user.profile.current_school = current_school
             user.profile.school_program = school_program
             user.profile.school_of_interest = school_of_interest
@@ -49,10 +43,22 @@ def signup(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=user.username, password=raw_password)
             login(request, user)
+            request.session['current_user'] = li_industry
             return redirect('home')
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
+
+
+@login_required(login_url='login/')
+def home(request):
+    current_user = request.session.get('current_user')
+    profile_info = [nb_classification.get_profile_info(id) for id in current_user]
+    # industry_of_interest = current_user.industry_of_interest
+    # li_industry = nb_classification.recommend_industry(industry_of_interest)
+    # return render(request, "home.html")
+    return render(request, "home.html", {'industry_recommend': profile_info})
+
 
 
 #def ind(request):

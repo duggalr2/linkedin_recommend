@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import nltk
 from nltk.stem.snowball import SnowballStemmer
 import sqlite3
@@ -27,7 +27,6 @@ def get_job_title():
     return job_title, company_name, profile_url
 
 job_title, company_name, profile_url = get_job_title()
-
 stopwords = nltk.corpus.stopwords.words('english')  # load the stop words from nltk
 stemmer = SnowballStemmer("english")  # stemming
 
@@ -166,33 +165,33 @@ def tuple_append(lst):
         start += 1
 
 
-lines = open('job_classified').readlines()
-lines = [line.replace('\n', '') for line in lines]
-job_list, job_class, big_list = [], [], []
-test = []
-for line in lines:
-    new_line = line.split(', ')
-    if len(new_line) == 1:
-        test.append(new_line[0])
-    else:
-        job_class.append(new_line[-1])
-        job_list.append(new_line[:-1])
-        big_list.append(list((' '.join(new_line[:-1]), new_line[-1])))
+# lines = open('job_classified').readlines()
+# lines = [line.replace('\n', '') for line in lines]
+# job_list, job_class, big_list = [], [], []
+# test = []
+# for line in lines:
+#     new_line = line.split(', ')
+#     if len(new_line) == 1:
+#         test.append(new_line[0])
+#     else:
+#         job_class.append(new_line[-1])
+#         job_list.append(new_line[:-1])
+#         big_list.append(list((' '.join(new_line[:-1]), new_line[-1])))
 
-tuple_append(big_list)
-with open('job_classified', 'w') as f:
-    for i in big_list:
-        if len(i) == 2:
-            job = i[0]
-            label = i[-1]
-            # print(job, label)
-            f.write(job + '=>' + str(label) + '\n')
-
-        elif len(i) > 2:
-            job = i[0]
-            label = i[1:] # list
-            # print(job, ', '.join(label))
-            f.write(job + '=>' + ', '.join(label) + '\n')
+# tuple_append(big_list)
+# with open('job_classified', 'w') as f:
+#     for i in big_list:
+#         if len(i) == 2:
+#             job = i[0]
+#             label = i[-1]
+#             # print(job, label)
+#             f.write(job + '=>' + str(label) + '\n')
+#
+#         elif len(i) > 2:
+#             job = i[0]
+#             label = i[1:] # list
+#             # print(job, ', '.join(label))
+#             f.write(job + '=>' + ', '.join(label) + '\n')
 
 
 # if __name__ == '__main__':
