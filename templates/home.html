@@ -12,14 +12,41 @@
         <a href="{% url 'logout' %}">Logout</a>
     </li>
 
-    {% for i in industry_recommend %}
-        {{ i.job_loc_list }}
-    {% endfor %}
+{#    <ol>#}
+{#    {% for i in intersection %}#}
+{#        <li>{{ i }}</li>#}
+{#    {% endfor %}#}
+{#    </ol>#}
 
-    {% for i in content %}
-        {{ i }}
-    {% endfor %}
+      <div class="col s5 s7" style="width: 30em; height: 5em;">
+    <h2 class="header">Horizontal Card</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="https://lorempixel.com/100/190/nature/6">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
+
+{#    <h1>Industry section</h1>#}
+
+{#    {% for i in industry_recommend %}#}
+{#        {{ i.job_loc_list }}#}
+{#    {% endfor %}#}
+{##}
+{#    <h1>Education section</h1>#}
+{##}
+{#    {% for i in edu_recommend %}#}
+{#        {{ i }}#}
+{#    {% endfor %}#}
 
 
 {% endblock %}

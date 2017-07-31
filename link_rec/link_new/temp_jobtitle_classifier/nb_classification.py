@@ -94,10 +94,6 @@ def recommend_industry(industry_interest):
     return list(set(major_list))
 
 
-# print(recommend_industry(['software', 'data_science', 'research']))  # a lot of duplicates, need to create a set!
-# print(get_profile_info(2))
-
-
 # if __name__ == '__main__':
 #     print(train_test())
 

@@ -19,20 +19,20 @@ INDUSTRY_CHOICES = (
 )
 
 SCHOOL_NAMES = (
-    ('uoft', 'University of Toronto'),
+    ('university_of_toronto', 'University of Toronto'),
     ('harvard', 'Harvard University'),
-    ('mit', 'Massachusetts Institute of Technology'),
-    ('waterloo', 'Univertsity of Waterloo'),
+    ('massachusetts_institute_of_technology', 'Massachusetts Institute of Technology'),
+    ('waterloo', 'University of Waterloo'),
     ('stanford', 'Stanford University'),
     ('western', 'Western University'),
-    ('ucb', 'University of California, Berkeley'),
+    ('university_of_california_berkeley', 'University of California, Berkeley'),
     ('caltech', 'Caltech'),
     ('cornell', 'Cornell University'),
     ('oxford', 'Oxford University'),
-    ('cmu', 'Carnegie Mellon University'),
-    ('upenn', 'University of Pennsylvania'),
+    ('carnegie_mellon_university', 'Carnegie Mellon University'),
+    ('university_of_pennsylvania', 'University of Pennsylvania'),
     ('cambridge', 'University of Cambridge'),
-    ('ucla', 'University of California, Los Angeles'),
+    ('university_of_california_los_angeles', 'University of California, Los Angeles'),
     ('queens', "Queen's University"),
     ('columbia', 'Columbia University')
 )
@@ -49,9 +49,9 @@ PROGRAM_CHOICES = (
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)  # One To One Field explains the One to One link
     name = models.CharField(max_length=250, default='name')
-    current_school = models.CharField(max_length=100, choices=SCHOOL_NAMES, default='uoft')
+    current_school = models.CharField(max_length=100, choices=SCHOOL_NAMES, default='university_of_toronto')
     school_program = models.CharField(max_length=100, choices=PROGRAM_CHOICES, default='computer_science')
-    school_of_interest = models.CharField(max_length=100, choices=SCHOOL_NAMES, default='uoft')
+    school_of_interest = models.CharField(max_length=100, choices=SCHOOL_NAMES, default='university_of_toronto')
     industry_of_interest = models.CharField(max_length=50, choices=INDUSTRY_CHOICES, default='software')
 
 
@@ -96,7 +96,6 @@ class AllParsedProfile(models.Model):
     school = models.CharField(max_length=500, null=True)
     school_program = models.CharField(max_length=500, null=True)
     program_classification = models.IntegerField(null=True)  # TODO: Automatic classification with AJAX
-    # industry_classification = models.CharField(max_length=500, null=True)
 
 
 class AllJobTitle(models.Model):

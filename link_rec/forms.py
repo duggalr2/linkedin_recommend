@@ -1,33 +1,47 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-# from .models import Profile
-from django.forms import ModelForm, MultiValueField, CharField
-from django.core.validators import RegexValidator
-import pickle
 
 
 INDUSTRY_CHOICES = (
-    ('software', 'software'),
-    ('entrepreneur', 'entrepreneur'),
-    ('data_science','data science'),
-    ('research', 'research'),
-    ('finance', 'finance'),
-    ('medicine','medicine'),
+    ('software', 'Software'),
+    ('engineering', 'Engineering, excluding Software'),
+    ('research', 'Research'),
+    ('design', 'Design'),
+    ('data_science', 'Data Science'),
+    ('product_manager', 'Product Manager'),
+    ('business_finance', 'Business and Finance'),
+    ('startup_founder', 'Startup Founders/Executives'),
+    ('admin_coordination', 'Startup Founders/Executives'),
+    ('startup_founder', 'Admin/Coordination/IT/HR'),
+    ('crypto_blockchain', 'Cryptography/Blockchain')
 )
 
 SCHOOL_NAMES = (
-    ('uoft', 'University of Toronto'),
-    ('harvard', 'Harvard'),
-    ('MIT', 'MIT'),
-    ('waterloo', 'Univertsity of Waterloo'),
+    ('university_of_toronto', 'University of Toronto'),
+    ('harvard', 'Harvard University'),
+    ('massachusetts_institute_of_technology', 'Massachusetts Institute of Technology'),
+    ('waterloo', 'University of Waterloo'),
+    ('stanford', 'Stanford University'),
+    ('western', 'Western University'),
+    ('university_of_california_berkeley', 'University of California, Berkeley'),
+    ('caltech', 'Caltech'),
+    ('cornell', 'Cornell University'),
+    ('oxford', 'Oxford University'),
+    ('carnegie_mellon_university', 'Carnegie Mellon University'),
+    ('university_of_pennsylvania', 'University of Pennsylvania'),
+    ('cambridge', 'University of Cambridge'),
+    ('university_of_california_los_angeles', 'University of California, Los Angeles'),
+    ('queens', "Queen's University"),
+    ('columbia', 'Columbia University')
 )
 
 PROGRAM_CHOICES = (
     ('computer_science', 'Computer Science'),
-    ('commerce', 'Commerce'),
-    ('medicine_lifesci', 'Medicine/Lifesci/Healthsci'),
-    ('math_statistics', 'Math/Statistics/Physics'),
+    ('commerce_business', 'Commerce/Business/Finance'),
+    ('humanities_lifesci', 'Humanities/LifeSci/HealthSci'),
+    ('math_physics_statistics', 'Math/Physics/Statistics'),
+    ('engineering', 'Engineering'),
 )
 
 

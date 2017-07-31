@@ -6,20 +6,13 @@ from link_rec.forms import SignUpForm
 from .models import Profile
 import ast
 from link_rec.link_new.temp_jobtitle_classifier import nb_classification
-
-
+from link_rec.link_new.temp_jobtitle_classifier import edu_classification
 
 
 #@login_required(login_url='login/')
 def personal_view(request):
 #    if request.method == 'GET':
     return render(request, 'button.html')
-
-
-def parse_to_list(form_input):
-    l = ast.literal_eval(form_input)
-    l = [i.strip() for i in l]
-    return l
 
 
 def signup(request):
@@ -35,6 +28,8 @@ def signup(request):
             industry_of_interest = form.cleaned_data.get('industry_of_interest')
             # print(industry_of_interest)  # ['software', 'data_science', 'research']
             li_industry = nb_classification.recommend_industry(industry_of_interest)
+            s = school_program.split()
+            edu_li = edu_classification.recommend_program(s)
             user.profile.current_school = current_school
             user.profile.school_program = school_program
             user.profile.school_of_interest = school_of_interest
@@ -43,7 +38,9 @@ def signup(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=user.username, password=raw_password)
             login(request, user)
-            request.session['current_user'] = li_industry
+            request.session['industry_rec'] = li_industry
+            request.session['edu_rec'] = edu_li
+            request.session['user_school'] = current_school
             return redirect('home')
     else:
         form = SignUpForm()
@@ -52,12 +49,16 @@ def signup(request):
 
 @login_required(login_url='login/')
 def home(request):
-    current_user = request.session.get('current_user')
-    profile_info = [nb_classification.get_profile_info(id) for id in current_user]
-    # industry_of_interest = current_user.industry_of_interest
-    # li_industry = nb_classification.recommend_industry(industry_of_interest)
-    # return render(request, "home.html")
-    return render(request, "home.html", {'industry_recommend': profile_info})
+    industry_rec = request.session.get('industry_rec')
+    edu_rec = request.session.get('edu_rec')
+    current_school = request.session.get('user_school')
+    ind_profile_info = [nb_classification.get_profile_info(id) for id in industry_rec]
+    edu_profile_info = [nb_classification.get_profile_info(id) for id in edu_rec]
+    new_int = edu_classification.find_intersection(ind_profile_info, edu_profile_info)
+    cosine_sim_list = edu_classification.cosine_school(edu_classification.intersection_school_name(new_int), current_school)
+    big_profile_info = [nb_classification.get_profile_info(row[0]) for row in cosine_sim_list]
+    return render(request, "home.html", {'industry_recommend': ind_profile_info, 'edu_recommend': edu_profile_info,
+                                         'intersection': big_profile_info})
 
 
 
