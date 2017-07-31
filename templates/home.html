@@ -1,4 +1,13 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+
+
+<head>
+
+    <style>
+    </style>
+
+</head>
 
 {% block content %}
 
@@ -12,28 +21,49 @@
         <a href="{% url 'logout' %}">Logout</a>
     </li>
 
+    {% for i in intersection %}
+        <li>{{ i }} <button>Click</button> </li>
+    {% endfor %}
+
+    {{ last_login }}
+    {{ industry }}
+
+
+
+{##}
+{#        <div class="wrapper">#}
+{#            <div class="icon">#}
+{#                <img src="{% static 'img/icon.jpg' %}" style="width: 4em;">#}
+{#            </div>#}
+{#            </div>#}
+{#            <div class="content">#}
+{#                <h4>Application #1</h4>#}
+{#                <p>This is an example application's description text.</p>#}
+{#            </div>#}
+{#        </div>#}
+{#    <div>#}
+{#        <img src="{% static 'img/icon.jpg' %}" style="width: 4em; margin: 0px;">#}
+{#        <span style="">Works.</span>#}
+{#    </div>#}
+{##}
+{#    <div class="card" style="width: 35em; height: 9em; margin: 0 auto; float: none; ">#}
+{#        <div class="card-block">#}
+{#            <img src="{% static 'img/icon.jpg' %}" style="width: 4em; margin: 0;">#}
+{#            <span></span><h3 class="card-title" style="padding: 0; margin: 0; vertical-align: baseline; outline: 0;">Rahul Duggal</h3>#}
+{#            <h6 class="card-subtitle mb-2 text-muted" style="float: center">Header information</h6>#}
+{#            <p class="card-text">University of Toronto, Math</p>#}
+{#            <p class="card-text">SWE at Google</p>#}
+{#        </div>#}
+{#    </div>#}
+
+
+
+
 {#    <ol>#}
 {#    {% for i in intersection %}#}
 {#        <li>{{ i }}</li>#}
 {#    {% endfor %}#}
 {#    </ol>#}
-
-      <div class="col s5 s7" style="width: 30em; height: 5em;">
-    <h2 class="header">Horizontal Card</h2>
-    <div class="card horizontal">
-      <div class="card-image">
-        <img src="https://lorempixel.com/100/190/nature/6">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
 {#    <h1>Industry section</h1>#}

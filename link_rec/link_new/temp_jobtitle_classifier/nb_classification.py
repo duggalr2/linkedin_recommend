@@ -5,6 +5,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn import metrics
 from link_rec.link_new.temp_jobtitle_classifier import regex
 import sqlite3
+from email_hunter import EmailHunterClient
 
 path = '/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/link_rec/link_new/temp_jobtitle_classifier/job_classified'
 job_title = pd.read_table(path, header=None, sep='=>', names=['title', 'label'])

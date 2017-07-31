@@ -23,6 +23,8 @@
       <sourceFolder url="file://$MODULE_DIR$/link_rec/link_new/temp_jobtitle_classifier" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Tutorial ML with text in sckit" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/static" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/static/img" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
