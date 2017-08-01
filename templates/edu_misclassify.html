@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for i in education %}
+        {{ i.school_program }}
+    {% endfor %}
+    <form method='POST' action='' >{% csrf_token %}
+            {{ form.as_p }}
+            <input type='submit' value='Create Post' />
+    </form>
+
+
+{% endblock %}

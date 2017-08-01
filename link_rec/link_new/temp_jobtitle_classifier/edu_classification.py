@@ -136,7 +136,7 @@ def intersection_school_name(intersection_list):
     c = conn.cursor()
     school_name, id_list = [], []
     for i in intersection_list:
-        url = i.get('profile_info')[2]
+        url = i.get('profile_info')[3]
         sql = 'SELECT id, school FROM link_rec_allparsedprofile WHERE url=?'
         c.execute(sql, (url,))
         y = c.fetchone()

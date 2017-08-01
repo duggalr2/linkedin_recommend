@@ -5,7 +5,6 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn import metrics
 from link_rec.link_new.temp_jobtitle_classifier import regex
 import sqlite3
-from email_hunter import EmailHunterClient
 
 path = '/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/link_rec/link_new/temp_jobtitle_classifier/job_classified'
 job_title = pd.read_table(path, header=None, sep='=>', names=['title', 'label'])
@@ -58,7 +57,7 @@ def predict_job(job_list):
 def get_profile_info(profile_id):
     conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
     c = conn.cursor()
-    sql = 'SELECT name, header, url, school, school_program FROM link_rec_allparsedprofile WHERE id=?'
+    sql = 'SELECT id, name, header, url, school, school_program FROM link_rec_allparsedprofile WHERE id=?'
     c.execute(sql, (profile_id,))
     profile_info = c.fetchone()
     sql = 'SELECT job FROM link_rec_alljobtitle WHERE profile_id=?'
@@ -68,7 +67,7 @@ def get_profile_info(profile_id):
     c.execute(sql, (profile_id,))
     job_loc_list = c.fetchall()
     major_dict = {}
-    major_dict['profile_info'] = profile_info
+    major_dict['profile_info'] = list(profile_info)
     major_dict['job_list'] = job_list
     major_dict['job_loc_list'] = job_loc_list
     return major_dict

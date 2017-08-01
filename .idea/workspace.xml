@@ -3,13 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c4a95e68-07ac-4037-be0b-d19f7b41bbbf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/linkedin_recommend.iml" afterPath="$PROJECT_DIR$/.idea/linkedin_recommend.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/link_rec/forms.py" afterPath="$PROJECT_DIR$/link_rec/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/edu_classification.py" afterPath="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/edu_classification.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/nb_classification.py" afterPath="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/nb_classification.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/link_rec/views.py" afterPath="$PROJECT_DIR$/link_rec/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linkedin_recommend/settings.py" afterPath="$PROJECT_DIR$/linkedin_recommend/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linkedin_recommend/urls.py" afterPath="$PROJECT_DIR$/linkedin_recommend/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/home.html" afterPath="$PROJECT_DIR$/templates/home.html" />
     </list>
     <ignored path="linkedin_recommend.iws" />
@@ -48,21 +47,11 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/link_rec/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="61" column="47" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
+            <state relative-caret-position="156">
+              <caret line="90" column="34" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
               <folding>
-                <element signature="e#0#45#0" expanded="true" />
+                <element signature="e#0#112#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -70,33 +59,13 @@
       <file leaf-file-name="edu_classification.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/edu_classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
+            <state relative-caret-position="450">
+              <caret line="160" column="7" selection-start-line="160" selection-start-column="7" selection-end-line="160" selection-end-column="7" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <marker date="1501515861000" expanded="true" signature="4234:4305" ph="SELECT id FR... link_rec_allparsedprofile" />
-                <marker date="1501515861000" expanded="true" signature="5567:5627" ph="SELECT schoo... link_rec_allparsedprofile" />
+                <marker date="1501526234000" expanded="true" signature="4234:4305" ph="SELECT id FR... link_rec_allparsedprofile" />
+                <marker date="1501526234000" expanded="true" signature="5567:5627" ph="SELECT schoo... link_rec_allparsedprofile" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/link_rec/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-810">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="45" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/link_rec/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-210">
-              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -105,65 +74,12 @@
         <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/nb_classification.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="72" column="45" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
+              <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="81" selection-end-column="79" />
               <folding>
-                <marker date="1501515673000" expanded="true" signature="2503:2593" ph="SELECT profi... link_rec_alljobtitle" />
-                <marker date="1501515673000" expanded="true" signature="2672:2727" ph="SELECT job F... link_rec_alljobtitle" />
-                <marker date="1501515673000" expanded="true" signature="2802:2857" ph="SELECT loc F... link_rec_alllocation" />
-                <marker date="1501515673000" expanded="true" signature="3780:3850" ph="SELECT profi... link_rec_allparsedprofile" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edu_regex.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/edu_regex.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-              <folding>
-                <marker date="1501166786000" expanded="true" signature="244:296" ph="SELECT schoo... link_rec_allparsedprofile" />
-                <marker date="1501166786000" expanded="true" signature="335:379" ph="SELECT schoo... link_rec_allparsedprofile" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="classification_pipeline.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/classification_pipeline.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="70" column="38" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-                <marker date="1501340846000" expanded="true" signature="566:628" ph="SELECT name link_rec_allparsedprofile" />
-                <marker date="1501340846000" expanded="true" signature="566:629" ph="SELECT name link_rec_allparsedprofile" />
-                <marker date="1501340846000" expanded="true" signature="566:631" ph="SELECT schoo... link_rec_allparsedprofile" />
-                <marker date="1501340846000" expanded="true" signature="713:765" ph="SELECT id FR... link_rec_allparsedprofile" />
-                <marker date="1501340846000" expanded="true" signature="843:898" ph="SELECT id FR... link_rec_alljobtitle" />
-                <marker date="1501340846000" expanded="true" signature="1046:1100" ph="SELECT id FR... link_rec_alljobtitle" />
-                <marker date="1501340846000" expanded="true" signature="1257:1320" ph="UPDATE link_... " />
-                <marker date="1501340846000" expanded="true" signature="1636:1705" ph="SELECT schoo... link_rec_allparsedprofile" />
-                <marker date="1501340846000" expanded="true" signature="1906:1978" ph="UPDATE link_... " />
-                <marker date="1501340846000" expanded="true" signature="2239:2291" ph="SELECT id FR... link_rec_allparsedprofile" />
-                <marker date="1501340846000" expanded="true" signature="2387:2459" ph="UPDATE link_... " />
-                <marker date="1501340846000" expanded="true" signature="2779:2831" ph="SELECT url F... link_rec_allparsedprofile" />
-                <marker date="1501340846000" expanded="true" signature="2949:3001" ph="SELECT url F... link_rec_allparsedprofile" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="regex.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/regex.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1995">
-              <caret line="133" column="12" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="12" />
-              <folding>
-                <element signature="e#34#45#0" expanded="true" />
-                <marker date="1501341360000" expanded="true" signature="482:518" ph="SELECT job F... link_rec_alljobtitle" />
-                <marker date="1501341360000" expanded="true" signature="603:639" ph="SELECT loc F... link_rec_alllocation" />
-                <marker date="1501341360000" expanded="true" signature="723:764" ph="SELECT url F... link_rec_allparsedprofile" />
+                <marker date="1501526779000" expanded="true" signature="2460:2554" ph="SELECT profi... link_rec_alljobtitle" />
+                <marker date="1501526779000" expanded="true" signature="2633:2688" ph="SELECT job F... link_rec_alljobtitle" />
+                <marker date="1501526779000" expanded="true" signature="2763:2818" ph="SELECT loc F... link_rec_alllocation" />
+                <marker date="1501526779000" expanded="true" signature="3747:3817" ph="SELECT profi... link_rec_allparsedprofile" />
               </folding>
             </state>
           </provider>
@@ -175,6 +91,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -209,12 +126,15 @@
         <option value="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/classification_pipeline.py" />
         <option value="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/regex.py" />
         <option value="$PROJECT_DIR$/link_rec/models.py" />
-        <option value="$PROJECT_DIR$/link_rec/forms.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/nb_classification.py" />
-        <option value="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/edu_classification.py" />
         <option value="$PROJECT_DIR$/linkedin_recommend/settings.py" />
+        <option value="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/edu_classification.py" />
+        <option value="$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/nb_classification.py" />
+        <option value="$PROJECT_DIR$/linkedin_recommend/urls.py" />
+        <option value="$PROJECT_DIR$/templates/job_misclassify.html" />
+        <option value="$PROJECT_DIR$/templates/edu_misclassify.html" />
         <option value="$PROJECT_DIR$/templates/home.html" />
+        <option value="$PROJECT_DIR$/link_rec/forms.py" />
         <option value="$PROJECT_DIR$/link_rec/views.py" />
       </list>
     </option>
@@ -384,7 +304,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="FullScreen" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/Tutorial ML with text in sckit/yelp.py" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/link_rec/views.py" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -833,57 +754,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/link_rec/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1395">
-          <caret line="96" column="32" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/link_new/dump_profile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1501255815000" expanded="true" signature="1532:1636" ph="INSERT INTO link_rec_allparsedprofile... " />
-            <marker date="1501255815000" expanded="true" signature="1858:1952" ph="INSERT INTO link_rec_allparsedprofile... " />
-            <marker date="1501255815000" expanded="true" signature="2226:2311" ph="INSERT INTO link_rec_allparsedprofile... " />
-            <marker date="1501255815000" expanded="true" signature="2516:2590" ph="INSERT INTO link_rec_allparsedprofile... " />
-            <marker date="1501255815000" expanded="true" signature="3183:3247" ph="INSERT INTO link_rec_alllocation... " />
-            <marker date="1501255815000" expanded="true" signature="3332:3396" ph="INSERT INTO link_rec_alljobtitle... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/link_new/linkedin_dest_url">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2940">
-          <caret line="196" column="45" selection-start-line="196" selection-start-column="45" selection-end-line="196" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/button.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/link_rec/link_new/linkedin_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -974,6 +844,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1111,19 +982,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/regex.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1995">
-          <caret line="133" column="12" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="12" />
-          <folding>
-            <element signature="e#34#45#0" expanded="true" />
-            <marker date="1501341360000" expanded="true" signature="482:518" ph="SELECT job F... link_rec_alljobtitle" />
-            <marker date="1501341360000" expanded="true" signature="603:639" ph="SELECT loc F... link_rec_alllocation" />
-            <marker date="1501341360000" expanded="true" signature="723:764" ph="SELECT url F... link_rec_allparsedprofile" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/new_classification.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
@@ -1133,6 +991,59 @@
             <marker date="1500952138000" expanded="true" signature="681:717" ph="SELECT job F... link_rec_alljobtitle" />
             <marker date="1500952138000" expanded="true" signature="802:838" ph="SELECT loc F... link_rec_alllocation" />
             <marker date="1500952138000" expanded="true" signature="922:963" ph="SELECT url F... link_rec_allparsedprofile" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/edu_classified">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/job_classified">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_rec/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linkedin_recommend/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/edu_regex.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <marker date="1501166786000" expanded="true" signature="244:296" ph="SELECT schoo... link_rec_allparsedprofile" />
+            <marker date="1501166786000" expanded="true" signature="335:379" ph="SELECT schoo... link_rec_allparsedprofile" />
           </folding>
         </state>
       </provider>
@@ -1160,63 +1071,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/edu_classified">
+    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/regex.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/job_classified">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/edu_regex.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state relative-caret-position="1995">
+          <caret line="133" column="12" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="12" />
           <folding>
-            <marker date="1501166786000" expanded="true" signature="244:296" ph="SELECT schoo... link_rec_allparsedprofile" />
-            <marker date="1501166786000" expanded="true" signature="335:379" ph="SELECT schoo... link_rec_allparsedprofile" />
+            <element signature="e#34#45#0" expanded="true" />
+            <marker date="1501341360000" expanded="true" signature="482:518" ph="SELECT job F... link_rec_alljobtitle" />
+            <marker date="1501341360000" expanded="true" signature="603:639" ph="SELECT loc F... link_rec_alllocation" />
+            <marker date="1501341360000" expanded="true" signature="723:764" ph="SELECT url F... link_rec_allparsedprofile" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/admin.py">
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.5/site-packages/django/urls/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="29" column="78" selection-start-line="29" selection-start-column="78" selection-end-line="29" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linkedin_recommend/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link_rec/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/forms.py">
+    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/edu_classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        <state relative-caret-position="450">
+          <caret line="160" column="7" selection-start-line="160" selection-start-column="7" selection-end-line="160" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <marker date="1501526234000" expanded="true" signature="4234:4305" ph="SELECT id FR... link_rec_allparsedprofile" />
+            <marker date="1501526234000" expanded="true" signature="5567:5627" ph="SELECT schoo... link_rec_allparsedprofile" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linkedin_recommend/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="27" column="63" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/templates/job_misclassify.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/edu_misclassify.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/link_rec/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-810">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="45" selection-end-column="1" />
+        <state relative-caret-position="495">
+          <caret line="103" column="22" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1224,50 +1157,40 @@
     <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/nb_classification.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="72" column="45" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
+          <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="81" selection-end-column="79" />
           <folding>
-            <marker date="1501515673000" expanded="true" signature="2503:2593" ph="SELECT profi... link_rec_alljobtitle" />
-            <marker date="1501515673000" expanded="true" signature="2672:2727" ph="SELECT job F... link_rec_alljobtitle" />
-            <marker date="1501515673000" expanded="true" signature="2802:2857" ph="SELECT loc F... link_rec_alllocation" />
-            <marker date="1501515673000" expanded="true" signature="3780:3850" ph="SELECT profi... link_rec_allparsedprofile" />
+            <marker date="1501526779000" expanded="true" signature="2460:2554" ph="SELECT profi... link_rec_alljobtitle" />
+            <marker date="1501526779000" expanded="true" signature="2633:2688" ph="SELECT job F... link_rec_alljobtitle" />
+            <marker date="1501526779000" expanded="true" signature="2763:2818" ph="SELECT loc F... link_rec_alllocation" />
+            <marker date="1501526779000" expanded="true" signature="3747:3817" ph="SELECT profi... link_rec_allparsedprofile" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link_rec/link_new/temp_jobtitle_classifier/edu_classification.py">
+    <entry file="file://$PROJECT_DIR$/link_rec/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
+        <state relative-caret-position="525">
+          <caret line="90" column="51" selection-start-line="90" selection-start-column="51" selection-end-line="90" selection-end-column="51" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <marker date="1501515861000" expanded="true" signature="4234:4305" ph="SELECT id FR... link_rec_allparsedprofile" />
-            <marker date="1501515861000" expanded="true" signature="5567:5627" ph="SELECT schoo... link_rec_allparsedprofile" />
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/linkedin_recommend/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        <state relative-caret-position="300">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/link_rec/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="61" column="47" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
+        <state relative-caret-position="156">
+          <caret line="90" column="34" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#112#0" expanded="true" />
           </folding>
         </state>
       </provider>

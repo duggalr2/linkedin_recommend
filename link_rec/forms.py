@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.forms import formset_factory, ModelForm
 
 
 INDUSTRY_CHOICES = (
@@ -56,6 +57,53 @@ class SignUpForm(UserCreationForm):
     class Meta:
         model = User
         fields = ('name', 'username', 'password1', 'password2', 'school', 'school_program', 'industry_of_interest', 'school_of_interest')
+
+
+MISCLASSIFY_SELECTION = (
+    ('education_program', 'Education Program'),
+    ('job_industry', 'Job Industry'),
+)
+
+
+class MisClassify(forms.Form):
+    first_selection = forms.ChoiceField(choices=MISCLASSIFY_SELECTION, )
+
+class InitialEduClassify(forms.Form):
+    pass
+
+class JobMisClassify(forms.Form):
+    # edu_correct = forms.ChoiceField(choices=MISCLASSIFY_SELECTION,)
+
+    def __init__(self, *args, **kwargs):
+        extra = kwargs.pop('extra')
+        super(JobMisClassify, self).__init__(*args, **kwargs)
+        for i, job in enumerate(extra):
+            self.fields['custom_%s' % i] = forms.ChoiceField(label=job, choices=INDUSTRY_CHOICES, required=False)
+            # self.fields['custom_%s' % i] = forms.CharField(label=job, max_length=250, required=False)
+
+    def extra_answers(self):
+        for name, value in self.cleaned_data.items():
+            if name.startswith('custom_'):
+                yield (self.fields[name].label, value)
+
+        # super(EducationMisClassify, self).__init__(*args, **kwargs)
+        # for i in range(0, n):
+        #     self.fields["edu_correct %d" % i] = forms.ChoiceField(choices=MISCLASSIFY_SELECTION,)
+
+    # edu_correct = forms.CharField(max_length=250)
+
+
+class EducationMisClassify(forms.Form):
+    edu_correct = forms.ChoiceField(choices=MISCLASSIFY_SELECTION,)
+    # job_selection = forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple, choices=(('job1', 'Default Job 1'),))
+
+
+
+
+
+
+
+
 
 
 #class AuthorForm(ModelForm):

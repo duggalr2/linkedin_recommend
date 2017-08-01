@@ -21,12 +21,27 @@
         <a href="{% url 'logout' %}">Logout</a>
     </li>
 
-    {% for i in intersection %}
-        <li>{{ i }} <button>Click</button> </li>
-    {% endfor %}
+    <br/>
 
-    {{ last_login }}
-    {{ industry }}
+    {% for i in intersection %}
+
+        <li>
+            {{ i.profile_info.0 }}
+
+            <a class="button" href="{% url 'edu_misclassify' id=i.profile_info.0 %}">Education</a>
+            <a class="button" href="{% url 'job_misclassify' id=i.profile_info.0 %}">Job</a>
+
+{#            <form method='GET' action='{% url 'edu_misclassify' id=i.profile_info.0 %}' > {% csrf_token %}#}
+{#                {{ form.as_p }} <span><input type='submit' value='Submit' /></span>#}
+{#            </form>#}
+{##}
+{#            <form method='GET' action='{% url 'job_misclassify' id=i.profile_info.0 %}' > {% csrf_token %}#}
+{#                {{ form.as_p }} <span><input type='submit' value='Submit' /></span>#}
+{#            </form>#}
+
+        </li>
+
+    {% endfor %}
 
 
 

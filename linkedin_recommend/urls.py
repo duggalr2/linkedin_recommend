@@ -26,5 +26,7 @@ urlpatterns = [
     url(r'^logout/$', views.logout, {'next_page': '/login'}, name='logout'),
     url(r'^signup/$', core_views.signup, name='signup'),
     url(r'^temp/$', core_views.personal_view, name='personal'),
-   # url(r'^index/$', core_views.ind, name='index'),
+    url(r'^(?P<id>\d+)/edu/$', core_views.edu_misclassify, name='edu_misclassify'),
+    url(r'^(?P<id>\d+)/job/$', core_views.job_misclassify, name='job_misclassify'),
+    # url(r'^edu_fix/$', core_views.job_misclassify, name='job_misclassify'),
 ]
