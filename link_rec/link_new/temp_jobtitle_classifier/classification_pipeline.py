@@ -80,6 +80,21 @@ def initial_update():
 # update_profile('https://www.linkedin.com/in/janhxie/')
 
 
-# TODO: find out why for some of the edu sections, parser didn't pick up the program name!
-# TODO: improve dataset;
-# TODO: Analyze the data and improve accuracy!
+def fix():
+    conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
+    c = conn.cursor()
+    original_id = 107
+    new_id = 108
+    while True:
+        if original_id == 207:
+            break
+        sql = 'UPDATE link_rec_alljobtitle SET profile_id=? WHERE profile_id=?'
+        c.execute(sql, (new_id, original_id,))
+        conn.commit()
+        original_id += 1
+        new_id += 1
+
+# fix()
+
+
+

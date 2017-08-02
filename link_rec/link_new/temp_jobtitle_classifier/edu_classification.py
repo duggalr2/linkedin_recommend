@@ -118,17 +118,28 @@ def find_intersection(one_li, second_li):
                     new_int.append(mon)
     return new_int
 
-# x = recommend_program(['computer_science', 'commerce_business', 'engineering'])
-# li = [nb_classification.get_profile_info(i) for i in x]
-# y = nb_classification.recommend_industry(['software', 'data_science', 'research'])
-# other_li = [nb_classification.get_profile_info(i) for i in y]
+x = recommend_program(['computer_science', 'commerce_business', 'engineering'])
+y = nb_classification.recommend_industry(['software', 'data_science', 'research'])
+li = [nb_classification.get_profile_info(i) for i in x]
+# for i in li:
+#     print(i)
+other_li = [nb_classification.get_profile_info(i) for i in y]
+# new_int = find_intersection(li, other_li)
+# for i in new_int:
+#     print(i)
+
+
 # new_int = []
+
 # for i in other_li:
-#     for k in li:
-#         if i.get('url') == k.get('url'):
-#             mon = i
-#             if mon not in new_int:
-#                 new_int.append(mon)
+#     print(i)
+    # for k in li:
+    #     if i.get('url') == k.get('url'):
+    #         mon = i
+    #         if mon not in new_int:
+    #             new_int.append(mon)
+
+
 
 
 def intersection_school_name(intersection_list):

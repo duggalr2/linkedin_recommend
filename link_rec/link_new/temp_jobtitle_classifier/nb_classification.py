@@ -72,6 +72,8 @@ def get_profile_info(profile_id):
     major_dict['job_loc_list'] = job_loc_list
     return major_dict
 
+print(get_profile_info(112))
+
 
 def recommend_industry(industry_interest):
     industry_map = {'software': 0, 'engineering': 1, 'research': 2, 'design': 3, 'data_science': 4,
