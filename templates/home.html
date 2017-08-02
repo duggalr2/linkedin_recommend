@@ -28,6 +28,7 @@
         <li>
             {{ i.profile_info }}
 
+                {# TODO: SHOW ORIGINAL CLASSIFICATION FOR THE ONES THAT ARE MISCLASSIFIED! #}
             <a class="button" href="{% url 'edu_misclassify' id=i.profile_info.0 %}">Education</a>
             <a class="button" href="{% url 'job_misclassify' id=i.profile_info.0 %}">Job</a>
 

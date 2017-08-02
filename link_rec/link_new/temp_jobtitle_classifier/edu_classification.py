@@ -62,7 +62,7 @@ tokens['seven'] = tokens.size / nb.class_count_[4]
 # print(tokens.sort_values('seven', ascending=False).head(10))  # engineering
 
 
-def predict_program(job_list):
+def predict_program(job_list, X, y):
     """Assign a classification to a url"""
     if job_list[0] is not None:
         edu_list = [regex.tokenize_and_stem(i) for i in job_list]

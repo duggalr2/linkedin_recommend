@@ -13,16 +13,16 @@ def open_file(filename):
     return [line.replace('\n', '') for line in lines if len(line)>1]
 
 
-def dump_profiles(num_iter):
+def dump_profiles(filename, num_iter):
     while num_iter >= 1:
         new_list = []
-        lines = open_file('linkedin_dest_url')
+        lines = open_file(filename)
         for line in lines:
             list_url = linkedin.get_people_viewed(line)
             new_list.append(list_url)
         num_iter -= 1
         new_list = list(set([y for i in new_list for y in i]))
-        with open('linkedin_dest_url', 'w') as f:
+        with open(filename, 'w') as f:
             for i in new_list:
                 f.write(i + '\n')
         print('Done', num_iter)
@@ -166,11 +166,12 @@ def parse_profiles_to_db(filename, slice=0, start_iter=0, end_iter=100, interval
     print('Done!')
 
 
-if __name__ == '__main__':
-    linkedin = linkedin_parser.Linkedin()
-    linkedin.linkedin_login()
-    # dump_profiles(2)
-    # parse_profiles_to_db('linkedin_dest_url', 157, 0, 210)
+# if __name__ == '__main__':
+#     linkedin = linkedin_parser.Linkedin()
+#     linkedin.linkedin_login()
+    # dump_profiles('temp_url_file', 2)
+    # parse_profiles_to_db('linkedin_dest_url', slice=56, start_iter=0, end_iter=75)
+    # print(open_file('linkedin_dest_url')[56])
 
     # conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
     # c = conn.cursor()

@@ -36,7 +36,6 @@ def update_profile(profile_url):
         print('Done!')
 
 
-
 # print(update_profile('https://www.linkedin.com/in/yulihav/'))
 conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
 c = conn.cursor()
@@ -46,7 +45,6 @@ for i in range(0, 228):
     c.execute(sql, (i,))
     url = c.fetchone()
     update_profile(url[0])
-
 
 
 # TODO: Delete and combine with above...

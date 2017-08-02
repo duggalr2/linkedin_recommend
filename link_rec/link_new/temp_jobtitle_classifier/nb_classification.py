@@ -58,10 +58,10 @@ def predict_job(job_list):
 def get_profile_info(profile_id):
     conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
     c = conn.cursor()
-    sql = 'SELECT id, name, header, url, school, school_program FROM link_rec_allparsedprofile WHERE id=?'
+    sql = 'SELECT id, name, header, url, school, school_program, program_classification FROM link_rec_allparsedprofile WHERE id=?'
     c.execute(sql, (profile_id,))
     profile_info = c.fetchone()
-    sql = 'SELECT job FROM link_rec_alljobtitle WHERE profile_id=?'
+    sql = 'SELECT job, job_classification FROM link_rec_alljobtitle WHERE profile_id=?'
     c.execute(sql, (profile_id,))
     job_list = c.fetchall()
     sql = 'SELECT loc FROM link_rec_alllocation WHERE profile_id=?'
