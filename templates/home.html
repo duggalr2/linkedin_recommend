@@ -26,7 +26,7 @@
     {% for i in intersection %}
 
         <li>
-            {{ i.profile_info.0 }}
+            {{ i.profile_info }}
 
             <a class="button" href="{% url 'edu_misclassify' id=i.profile_info.0 %}">Education</a>
             <a class="button" href="{% url 'job_misclassify' id=i.profile_info.0 %}">Job</a>

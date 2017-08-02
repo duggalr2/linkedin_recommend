@@ -31,6 +31,7 @@ def train_test():
     # w = list(X_test)
     return metrics.accuracy_score(y_test, y_pred_class)
 
+# print(train_test())
 
 def predict_job(job_list):
     """Assign a classification to a url"""
@@ -72,7 +73,7 @@ def get_profile_info(profile_id):
     major_dict['job_loc_list'] = job_loc_list
     return major_dict
 
-print(get_profile_info(112))
+# print(get_profile_info(112))
 
 
 def recommend_industry(industry_interest):

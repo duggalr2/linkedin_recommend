@@ -13,25 +13,41 @@ def update_profile(profile_url):
     """
     conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
     c = conn.cursor()
-    sql = "SELECT school_program FROM link_rec_allparsedprofile WHERE url= ?"
-    c.execute(sql, (profile_url,))
-    school_program = c.fetchone()
+    # sql = "SELECT school_program FROM link_rec_allparsedprofile WHERE url= ?"
+    # c.execute(sql, (profile_url,))
+    # school_program = c.fetchone()
     sql = "SELECT id FROM link_rec_allparsedprofile WHERE url=?"
     c.execute(sql, (profile_url,))
     profile_id = c.fetchone()
     sql = "SELECT job FROM link_rec_alljobtitle WHERE profile_id=?"
     c.execute(sql, (profile_id[0],))
     job_list = c.fetchall()
-    job_list_classification = nb_classification.predict_job(job_list)
-    sql = "SELECT id FROM link_rec_alljobtitle WHERE profile_id=?"
-    c.execute(sql, (profile_id[0],))
-    job_id = c.fetchall()
-    job_id = [y for i in job_id for y in i]
-    for i in range(len(job_id)):
-        sql = 'UPDATE link_rec_alljobtitle SET job_classification=? WHERE id=?'
-        c.execute(sql, (job_list_classification[i], job_id[i]))
-        conn.commit()
-    print('Done!')
+    if len(job_list) > 0:
+        job_list_classification = nb_classification.predict_job(job_list)
+        print(profile_id[0], job_list_classification)
+        sql = "SELECT id FROM link_rec_alljobtitle WHERE profile_id=?"
+        c.execute(sql, (profile_id[0],))
+        job_id = c.fetchall()
+        job_id = [y for i in job_id for y in i]
+        for i in range(len(job_id)):
+            sql = 'UPDATE link_rec_alljobtitle SET job_classification=? WHERE id=?'
+            c.execute(sql, (job_list_classification[i], job_id[i]))
+            conn.commit()
+        print('Done!')
+
+
+
+# print(update_profile('https://www.linkedin.com/in/yulihav/'))
+conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
+c = conn.cursor()
+sql = 'SELECT url FROM link_rec_allparsedprofile WHERE id=?'
+for i in range(0, 228):
+    sql = 'SELECT url FROM link_rec_allparsedprofile WHERE id=?'
+    c.execute(sql, (i,))
+    url = c.fetchone()
+    update_profile(url[0])
+
+
 
 # TODO: Delete and combine with above...
 def temp_edu_update(profile_url):
@@ -41,11 +57,13 @@ def temp_edu_update(profile_url):
     c.execute(sql, (profile_url,))
     school_program = c.fetchone()
     if school_program[-1] is not None:
+        # print(school_program[1:])
         prediction = edu_classification.predict_program(school_program[1:])
-        sql = 'UPDATE link_rec_allparsedprofile SET program_classification=? WHERE id=?'
-        i = prediction[0]
-        c.execute(sql, (int(i), school_program[0]))
-        conn.commit()
+        # print(prediction)
+        # sql = 'UPDATE link_rec_allparsedprofile SET program_classification=? WHERE id=?'
+        # i = prediction[0]
+        # c.execute(sql, (int(i), school_program[0]))
+        # conn.commit()
         # c.execute(sql, (prediction[0], school_program[0]))
         # conn.commit()
     else:
@@ -61,6 +79,7 @@ def temp_edu_update(profile_url):
     # print('Done!')
 
 # temp_edu_update('https://www.linkedin.com/in/janhxie/')
+# temp_edu_update('https://www.linkedin.com/in/annie-hughey-b5449a102/')
 
 
 def initial_update():
@@ -95,6 +114,8 @@ def fix():
         new_id += 1
 
 # fix()
+
+
 
 
 

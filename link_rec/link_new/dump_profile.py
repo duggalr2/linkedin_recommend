@@ -115,12 +115,12 @@ def clean_header(header_list):
         return name, title, url
 
 
-def parse_profiles_to_db(filename, start_iter=0, end_iter=100, interval=7):
+def parse_profiles_to_db(filename, slice=0, start_iter=0, end_iter=100, interval=7):
     # THE LENGTH OF THE FILE NEEDS TO BE BIGGER THAN 7!
 
     conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
     c = conn.cursor()
-    lines = open_file(filename)  # url file
+    lines = open_file(filename)[slice:]  # url file
     c.execute('SELECT id FROM link_rec_allparsedprofile ORDER BY id DESC LIMIT 1')
     original_id = c.fetchone()
     new_id = 0
@@ -170,7 +170,7 @@ if __name__ == '__main__':
     linkedin = linkedin_parser.Linkedin()
     linkedin.linkedin_login()
     # dump_profiles(2)
-    parse_profiles_to_db('linkedin_dest_url', 80, 140)
+    # parse_profiles_to_db('linkedin_dest_url', 157, 0, 210)
 
     # conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
     # c = conn.cursor()

@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
-# from sklearn import metrics
+from sklearn import metrics
 import numpy as np
 from link_rec.link_new.temp_jobtitle_classifier import regex
 import sqlite3
@@ -82,6 +82,38 @@ def predict_program(job_list):
     else:
         return None
 
+# conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
+# c = conn.cursor()
+# sql = 'SELECT url FROM link_rec_allparsedprofile WHERE id=?'
+# # c.execute(sql, (68,))
+# # print(update_profile(c.fetchone()[0]))
+# for i in range(0, 228):
+#     sql = 'SELECT url FROM link_rec_allparsedprofile WHERE id=?'
+#     c.execute(sql, (i,))
+#     url = c.fetchone()
+#     sql = "SELECT id, school_program FROM link_rec_allparsedprofile WHERE url= ?"
+#     c.execute(sql, (url[0],))
+#     school_program = c.fetchone()
+#     if school_program[-1] is not None:
+#         prediction = predict_program(school_program[1:])
+#         # print(prediction)
+#         sql = 'UPDATE link_rec_allparsedprofile SET program_classification=? WHERE id=?'
+#         i = prediction[0]
+#         c.execute(sql, (int(i), school_program[0]))
+#         conn.commit()
+
+
+
+# conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
+# c = conn.cursor()
+# sql = "SELECT id, school_program FROM link_rec_allparsedprofile WHERE url= ?"
+# c.execute(sql, ('https://www.linkedin.com/in/karalabe/',))
+# school_program = c.fetchone()
+# if school_program[-1] is not None:
+#     # print(school_program[1:])
+#     prediction = predict_program(school_program[1:])
+#     # print(prediction)
+
 
 # print(predict_program(('Computer Science and Engineering',)))
 
@@ -138,8 +170,6 @@ other_li = [nb_classification.get_profile_info(i) for i in y]
     #         mon = i
     #         if mon not in new_int:
     #             new_int.append(mon)
-
-
 
 
 def intersection_school_name(intersection_list):
