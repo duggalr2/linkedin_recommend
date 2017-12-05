@@ -13,7 +13,7 @@ def get_job_title():
     """
     Return's job title, company_name, profile_url for each profile in db
     """
-    conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
+    conn = sqlite3.connect('/Users/Rahul/Desktop/Side_projects/linkedin_recommend/db.sqlite3')
     c = conn.cursor()
     c.execute('SELECT job FROM link_rec_alljobtitle')
     y = c.fetchall()
@@ -245,7 +245,7 @@ def tuple_append(lst):
 
 
 # def get_job_title():
-#     conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
+#     conn = sqlite3.connect('/Users/Rahul/Desktop/Side_projects/linkedin_recommend/db.sqlite3')
 #     c = conn.cursor()
 #     c.execute('SELECT job FROM link_rec_alljobtitle')
 #     y = c.fetchall()

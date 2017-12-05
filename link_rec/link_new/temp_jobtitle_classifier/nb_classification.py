@@ -6,7 +6,7 @@ from sklearn import metrics
 from link_rec.link_new.temp_jobtitle_classifier import regex
 import sqlite3
 
-path = '/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/link_rec/link_new/temp_jobtitle_classifier/job_classified'
+path = '/Users/Rahul/Desktop/Side_projects/linkedin_recommend/link_rec/link_new/temp_jobtitle_classifier/job_classified'
 job_title = pd.read_table(path, header=None, sep='=>', names=['title', 'label'])
 # job_title['label_num'] = job_title.label({'software':0, 'engineering':1, 'research':2, 'design':3, 'data_science':4,
 #                                           'product_manager':5, 'business_finance':6, 'startup_founder':7,
@@ -56,7 +56,7 @@ def predict_job(job_list):
 
 
 def get_profile_info(profile_id):
-    conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
+    conn = sqlite3.connect('/Users/Rahul/Desktop/Side_projects/linkedin_recommend/db.sqlite3')
     c = conn.cursor()
     sql = 'SELECT id, name, header, url, school, school_program, program_classification FROM link_rec_allparsedprofile WHERE id=?'
     c.execute(sql, (profile_id,))
@@ -84,7 +84,7 @@ def recommend_industry(industry_interest):
         if i in industry_map.keys():
             industry_interest[industry_interest.index(i)] = industry_map.get(i)
 
-    conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
+    conn = sqlite3.connect('/Users/Rahul/Desktop/Side_projects/linkedin_recommend/db.sqlite3')
     c = conn.cursor()
     major_list = []
     for interest in industry_interest:

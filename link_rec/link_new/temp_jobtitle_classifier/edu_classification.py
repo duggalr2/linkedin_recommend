@@ -8,7 +8,7 @@ from link_rec.link_new.temp_jobtitle_classifier import regex
 import sqlite3
 from link_rec.link_new.temp_jobtitle_classifier import nb_classification
 
-path = '/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/link_rec/link_new/temp_jobtitle_classifier/edu_classified'
+path = '/Users/Rahul/Desktop/Side_projects/linkedin_recommend/link_rec/link_new/temp_jobtitle_classifier/edu_classified'
 job_title = pd.read_table(path, header=None, sep=', ', names=['title', 'label'])
 # job_title['label_num'] = job_title.label({'software':0, 'engineering':1, 'research':2, 'design':3, 'data_science':4,
 #                                           'product_manager':5, 'business_finance':6, 'startup_founder':7,
@@ -82,7 +82,7 @@ def predict_program(job_list, X, y):
     else:
         return None
 
-# conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
+# conn = sqlite3.connect('/Users/Rahul/Desktop/Side_projects/linkedin_recommend/db.sqlite3')
 # c = conn.cursor()
 # sql = 'SELECT url FROM link_rec_allparsedprofile WHERE id=?'
 # # c.execute(sql, (68,))
@@ -104,7 +104,7 @@ def predict_program(job_list, X, y):
 
 
 
-# conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
+# conn = sqlite3.connect('/Users/Rahul/Desktop/Side_projects/linkedin_recommend/db.sqlite3')
 # c = conn.cursor()
 # sql = "SELECT id, school_program FROM link_rec_allparsedprofile WHERE url= ?"
 # c.execute(sql, ('https://www.linkedin.com/in/karalabe/',))
@@ -126,7 +126,7 @@ def recommend_program(program_interest):
         if i in edu_map.keys():
             program_interest[program_interest.index(i)] = edu_map.get(i)
 
-    conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
+    conn = sqlite3.connect('/Users/Rahul/Desktop/Side_projects/linkedin_recommend/db.sqlite3')
     c = conn.cursor()
     major_list = []
 
@@ -173,7 +173,7 @@ other_li = [nb_classification.get_profile_info(i) for i in y]
 
 
 def intersection_school_name(intersection_list):
-    conn = sqlite3.connect('/Users/Rahul/Desktop/Main/Side_projects/linkedin_recommend/db.sqlite3')
+    conn = sqlite3.connect('/Users/Rahul/Desktop/Side_projects/linkedin_recommend/db.sqlite3')
     c = conn.cursor()
     school_name, id_list = [], []
     for i in intersection_list:
