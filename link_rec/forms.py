@@ -68,8 +68,10 @@ MISCLASSIFY_SELECTION = (
 class MisClassify(forms.Form):
     first_selection = forms.ChoiceField(choices=MISCLASSIFY_SELECTION, )
 
+
 class InitialEduClassify(forms.Form):
     pass
+
 
 class JobMisClassify(forms.Form):
     # edu_correct = forms.ChoiceField(choices=MISCLASSIFY_SELECTION,)

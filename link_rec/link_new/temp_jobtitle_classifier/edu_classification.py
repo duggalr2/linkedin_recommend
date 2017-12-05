@@ -34,7 +34,7 @@ w = list(X_test)
 # for i in range(len(y_pred_class)):  # TODO: Look for 'trouble' words;
 #     print(w[i], y_pred_class[i])
 
-# print(metrics.accuracy_score(y_test, y_pred_class))
+print(metrics.accuracy_score(y_test, y_pred_class))
 
 X_train_tokens = vect.get_feature_names()
 software_token_count = nb.feature_count_[0, :]  # number of times each token appears across all software titles

@@ -7,6 +7,7 @@ import ast
 from link_rec.link_new.temp_jobtitle_classifier import nb_classification
 from link_rec.link_new.temp_jobtitle_classifier import edu_classification
 
+# TODO: Rank the profiles so when the intersection is made, rank further based on program/companies/jobtitles!!
 
 #@login_required(login_url='login/')
 def personal_view(request):
